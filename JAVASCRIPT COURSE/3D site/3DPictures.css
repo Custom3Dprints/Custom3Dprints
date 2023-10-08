@@ -306,7 +306,6 @@
         ),
         url('Jordan1.png');
 }
-/*
 .services__card:nth-child(11){
     background-image: linear-gradient(
         to bottom, 
@@ -314,14 +313,15 @@
         rgba(17,17,17,0.6)100%
         ),
         url('jordan1-keychain.png');
-}
+    }
+/*
 .services__card:nth-child(12){
     background-image: linear-gradient(
         to bottom, 
         rgba(0,0,0,0) 0%, 
         rgba(17,17,17,0.6)100%
-        ),
-        url('jeep.webp');
+    ),
+    url('jeep.webp');
 }
 .services__card:nth-child(13){
     background-image: linear-gradient(
@@ -330,16 +330,16 @@
         rgba(17,17,17,0.6)100%
         ),
         url('moveable\ dragon.webp');
-}
-.services__card:nth-child(14){
+    }
+    .services__card:nth-child(14){
     background-image: linear-gradient(
         to bottom, 
         rgba(0,0,0,0) 0%, 
         rgba(17,17,17,0.6)100%
         ),
         url('dino_pencil-holder.png');
-}
-
+    }
+    
 */
 
 
