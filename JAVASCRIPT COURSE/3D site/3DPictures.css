@@ -298,6 +298,46 @@
         ),
         url('pic9.png');
 }
+.services__card:nth-child(10){
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%, 
+        rgba(17,17,17,0.6)100%
+        ),
+        url('Jordan_1.webp');
+}
+.services__card:nth-child(11){
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%, 
+        rgba(17,17,17,0.6)100%
+        ),
+        url('jordan1-keychain.png');
+}
+.services__card:nth-child(12){
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%, 
+        rgba(17,17,17,0.6)100%
+        ),
+        url('jeep.webp');
+}
+.services__card:nth-child(13){
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%, 
+        rgba(17,17,17,0.6)100%
+        ),
+        url('moveable\ dragon.webp');
+}
+.services__card:nth-child(14){
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%, 
+        rgba(17,17,17,0.6)100%
+        ),
+        url('dino_pencil-holder.png');
+}
 
 /*
 */

@@ -330,6 +330,14 @@
     ),
     url('normal\ ghost.webp');
 }
+.services__card:nth-child(14){
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%, 
+        rgba(17,17,17,0.6)100%
+    ),
+    url('Boo-Ty\ Keychain.webp');
+}
 
 .services__card{ 
     color: #fff;
