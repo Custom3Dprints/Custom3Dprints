@@ -330,16 +330,31 @@
     ),
     url('Jeep.png');
 }
-/*
-.services__card:nth-child(13){
+.services__card:nth-child(14){
     background-image: linear-gradient(
         to bottom, 
         rgba(0,0,0,0) 0%, 
         rgba(17,17,17,0.6)100%
         ),
-        url('moveable\ dragon.webp');
-    }
-*/
+        url('charzard.webp');
+}
+.services__card:nth-child(15){
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%, 
+        rgba(17,17,17,0.6)100%
+        ),
+        url('Blastoid.webp');
+}
+.services__card:nth-child(16){
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%, 
+        rgba(17,17,17,0.6)100%
+        ),
+        url('pikachu.webp');
+}
+
     
 
 
