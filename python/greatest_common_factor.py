@@ -13,7 +13,7 @@
 #        CF = ([a for a in factors for b in factors2 if a == b])
 #
 #        #Greatest common facotr
-#        return int(CF[-1])
+#        return int(CF[-1])s
 #
 #print(GreatestCommonFactor(54, 16).gcf()) 
 
@@ -34,4 +34,4 @@ class GreatestCommonFactor():
         #Greatest common facotr
         return int(CF[-1])
 
-#print(GreatestCommonFactor(10, 5).gcf()) 
+#print(GreatestCommonFactor(int(input("num1: ")), int(input("num2: "))).gcf()) 

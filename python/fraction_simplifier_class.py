@@ -54,7 +54,7 @@ class simplifier: #input needed tuple from fraction(nums).simplify() ex: (6,2)
 
 #num = (fraction('38/14').nums())
 #print(simplifier(num).simplify())
-print(simplifier(fraction(str(input('numerator: ')+'/'+str(input('denominator: ')))).nums()).simplify())
+#print(simplifier(fraction(str(input('numerator: ')+'/'+str(input('denominator: ')))).nums()).simplify())
 
 
 """

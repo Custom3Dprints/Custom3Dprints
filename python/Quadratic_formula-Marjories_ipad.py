@@ -14,7 +14,7 @@ if InSqrt < 0:
     InSqrt = abs(InSqrt)
     print("NO SOLUTION")
 
-print(f"\n{-b}±√{b}² ({-4} * {a} * {c})\n    {2} * {a}") #formula
+print(f"\n{-b}±√{b}² {-4}({a})({c})\n    {2}({a})") #formula
 
 
 char_type = (int_float(math.sqrt(InSqrt)).int_float()) #checks if number has perfect sqrt
