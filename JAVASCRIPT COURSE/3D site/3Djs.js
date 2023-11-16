@@ -12,7 +12,6 @@ menu.addEventListener('click', function(){
 function Home() {
     window.location.href = "3Dhtml.html";
 }
-
 function Pictures() {
     window.location.href = "3DPictures.html";
 }
@@ -20,7 +19,7 @@ function Links() {
     window.location.href = "3DLinks.html";
 }
 function Specials() {
-    window.location.href = "3Dspecials.html";
+    window.location.href = "Halloween.html";
 }
 function About() {
     window.location.href = "3DAbout.html";
