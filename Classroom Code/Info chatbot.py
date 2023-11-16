@@ -61,7 +61,7 @@ while True:
 
 
   elif len(returnedCats) > 1:
-    Answer = input(f"line 55\nWould you like to read about {Or_Join}? ")
+    Answer = input(f"line 64\nWould you like to read about {Or_Join}? ")
     print(f"Answer.capitalize = {Answer.capitalize()}")
     if Answer.capitalize() in Cat_lists:
       print(f"line 57\n{Cat_dict[Answer.capitalize()]}")

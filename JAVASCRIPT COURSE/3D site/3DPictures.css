@@ -203,214 +203,106 @@
 
 
 /*Services Section CSS*/
-.services {
-    background: #141414;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-}
-
-.services__container{  /* whole card */
+.columns {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: #131313;
+}
+.column{
+    margin: 2% 2%;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+.image {
+    background-image: url('pic1.png');
+	height: 200px;
+	width: 400px;
+	background-size: cover;
+    /*
+	background-position: center;
+    */
+    border-radius: 4px;
+}
+.image-2{
+    background-image: url('pic2.png');
+}
+.image-3{
+    background-image: url('pic3.png');
+}
+.image-4{
+    background-image: url('pic4.png');
+}
+.image-5{
+    background-image: url('pic5.png');
+}
+.image-6{
+    background-image: url('pic6.png');
+}
+.image-7{
+    background-image: url('pic7.png');
+}
+.image-8{
+    background-image: url('pic8.png');
+}
+.image-9{
+    background-image: url('pic9.png');
+}
+.image-10{
+    background-image: url('Jordan1.png');
+}
+.image-11{
+    background-image: url('jordan1-keychain.png');
+}
+.image-12{
+    background-image: url('dino_pencil-holder.png');
+}
+.image-13{
+    background-image: url('Jeep.png');
+}
+.image-14{
+    background-image: url('charzard.webp');
+}
+.image-15{
+    background-image: url('Blastoid.webp');
+}
+.image-16{
+    background-image: url('pikachu.webp');
 }
 
-.services__card{ /*only pic*/
-    margin: 4% 2%;
-    height: 200px;
-    width: 400px;
-    border-radius: 4px;
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0) 0%, 
-        rgba(17,17,17,0.6)100%
-    ),
-    url('pic1.png');
-    background-size: cover;
-    position: relative;
+.column:hover .image{
+	height: 250px;
+	width: 440px;
+}
+.column h2{
+    padding: 2%;
     color: #fff;
 }
-
-.services__card:nth-child(2){
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0) 0%, 
-        rgba(17,17,17,0.6)100%
-    ),
-    url('pic2.png');
-}
-.services__card:nth-child(3){
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0) 0%, 
-        rgba(17,17,17,0.6)100%
-    ),
-    url('pic3.png');
-}
-.services__card:nth-child(4){
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0) 0%, 
-        rgba(17,17,17,0.6)100%
-    ),
-    url('pic4.png');
-}
-.services__card:nth-child(5){
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0) 0%, 
-        rgba(17,17,17,0.6)100%
-    ),
-    url('pic5.png');
-}
-.services__card:nth-child(6){
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0) 0%, 
-        rgba(17,17,17,0.6)100%
-    ),
-    url('pic6.png');
-}
-.services__card:nth-child(7){
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0) 0%, 
-        rgba(17,17,17,0.6)100%
-    ),
-    url('pic7.png');
-}
-.services__card:nth-child(8){
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0) 0%, 
-        rgba(17,17,17,0.6)100%
-        ),
-        url('pic8.png');
-}
-.services__card:nth-child(9){
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0) 0%, 
-        rgba(17,17,17,0.6)100%
-        ),
-        url('pic9.png');
-}
-.services__card:nth-child(10){
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0) 0%, 
-        rgba(17,17,17,0.6)100%
-        ),
-        url('Jordan1.png');
-}
-.services__card:nth-child(11){
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0) 0%, 
-        rgba(17,17,17,0.6)100%
-        ),
-        url('jordan1-keychain.png');
-    }
-.services__card:nth-child(12){
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0) 0%, 
-        rgba(17,17,17,0.6)100%
-        ),
-        url('dino_pencil-holder.png');
-}
-.services__card:nth-child(13){
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0) 0%, 
-        rgba(17,17,17,0.6)100%
-    ),
-    url('Jeep.png');
-}
-.services__card:nth-child(14){
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0) 0%, 
-        rgba(17,17,17,0.6)100%
-        ),
-        url('charzard.webp');
-}
-.services__card:nth-child(15){
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0) 0%, 
-        rgba(17,17,17,0.6)100%
-        ),
-        url('Blastoid.webp');
-}
-.services__card:nth-child(16){
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0) 0%, 
-        rgba(17,17,17,0.6)100%
-        ),
-        url('pikachu.webp');
-}
-
-    
-
-
-.services h2{
-    position: absolute;
-    top: 220px;
-    left: 30px;
-}
-
-.services__card p{
-    position: absolute;
-    top: 260px;
-    left: 30px;
-}
-
-.services__card button{
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    background: #f77062;
-    position: absolute;
-    top: 300px;
-    left: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
 
 
 /*moves the picture on homepage accordingly*/
 @media screen and (max-width: 768px){
-    .services__container{
-        display: grid;
-        grid-template-columns: auto;
-        align-items: center;
-        justify-self: center;
-        width: 100%;
-        margin: 0 auto;
-        height: 90vh;
+    .columns {
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+    .image {
+        background-position: center;
+        border-radius: 4px;
     }
 
-    .services__card{
-        text-align: center;
-        margin-bottom: 5rem;
-    }
-
-    .services__card h2{
-        font-size: 2rem;
+    .column h2{
+        position: relative;
+        color: #fff;
+        padding: 8px;
+        padding-top: 20px;
     }
 }
 
 @media screen and (max-width: 480px){
     
-    .services__card h2{
+    .column h2{
         font-size: 1.5rem;
     }
 }

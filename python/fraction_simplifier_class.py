@@ -25,7 +25,9 @@ class simplifier: #input needed tuple from fraction(nums).simplify() ex: (6,2)
     def simplify(self):
         numerator = self.fraction[0]
         denominator = self.fraction[1]
-        if numerator < 0: #if numerator is negative
+        if numerator == 0:
+            return 0
+        elif numerator < 0: #if numerator is negative
             numerator = abs(numerator) #absolute value of number
             gcf = GreatestCommonFactor(numerator, denominator).gcf()
             
@@ -54,7 +56,7 @@ class simplifier: #input needed tuple from fraction(nums).simplify() ex: (6,2)
 
 #num = (fraction('38/14').nums())
 #print(simplifier(num).simplify())
-#print(simplifier(fraction(str(input('numerator: ')+'/'+str(input('denominator: ')))).nums()).simplify())
+print(simplifier(fraction(str(input('numerator: ')+'/'+str(input('denominator: ')))).nums()).simplify())
 
 
 """
