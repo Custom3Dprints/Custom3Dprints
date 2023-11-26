@@ -217,8 +217,8 @@
 }
 
 .services__card{ /*only pic*/
-    margin: 4% 2%;
-    height: 400px;
+    margin: 4% 4%;
+    height: 300px;
     width: 400px;
     border-radius: 4px;
     background-image: linear-gradient(
@@ -305,6 +305,46 @@
         ),
         url('Christmas\ lego\ head.webp');
 }
+.services__card:nth-child(11){
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%, 
+        rgba(17,17,17,0.6)100%
+        ),
+        url('Santa Merry Christmas corner.webp');
+}
+.services__card:nth-child(12){
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%, 
+        rgba(17,17,17,0.6)100%
+        ),
+        url('Door Grinch Corner.webp');
+}
+.services__card:nth-child(13){
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%, 
+        rgba(17,17,17,0.6)100%
+        ),
+        url('Santa\ slegh\ door\ corner.webp');
+}
+.services__card:nth-child(14){
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%, 
+        rgba(17,17,17,0.6)100%
+        ),
+        url('HOHOHO\ Grinch.webp');
+}
+.services__card:nth-child(15){
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%, 
+        rgba(17,17,17,0.6)100%
+        ),
+        url('Snowman\ christmas\ corner.webp');
+}
 
 .services__card{ 
     color: #fff;
@@ -335,7 +375,6 @@
 }
 
 @media screen and (max-width: 480px){
-    
     .services__card h2{
         font-size: 1.5rem;
     }

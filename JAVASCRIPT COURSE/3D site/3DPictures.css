@@ -241,9 +241,7 @@
 .image-7{
     background-image: url('pic7.png');
 }
-.image-8{
-    background-image: url('pic8.png');
-}
+
 .image-9{
     background-image: url('pic9.png');
 }
@@ -267,6 +265,18 @@
 }
 .image-16{
     background-image: url('pikachu.webp');
+}
+.image-17{
+    background-image: url('harry\ potter\ house\ bookmark.webp');
+}
+.image-18{
+    background-image: url('light\ saber.webp');
+}
+.image-19{
+    background-image: url('love\ rose\ bear.webp');
+}
+.image-20{
+    background-image: url('no\ stupid\ people\ sign.webp');
 }
 
 .column:hover .image{
