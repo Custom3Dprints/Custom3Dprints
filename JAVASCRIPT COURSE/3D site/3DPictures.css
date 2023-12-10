@@ -6,6 +6,7 @@
     background: #131313;
 }
 
+
 .navbar{
     background: #131313;
     height: 80px;
@@ -203,93 +204,108 @@
 
 
 /*Services Section CSS*/
-.columns {
+
+.container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
     flex-wrap: wrap;
 }
-.column{
-    margin: 2% 2%;
-    border-radius: 4px;
-    transition: 0.3s ease;
-}
-.image {
-    background-image: url('pic1.png');
-	height: 200px;
-	width: 400px;
-	background-size: cover;
-    /*
-	background-position: center;
-    */
-    border-radius: 4px;
-}
-.image-2{
-    background-image: url('pic2.png');
-}
-.image-3{
-    background-image: url('pic3.png');
-}
-.image-4{
-    background-image: url('pic4.png');
-}
-.image-5{
-    background-image: url('pic5.png');
-}
-.image-6{
-    background-image: url('pic6.png');
-}
-.image-7{
-    background-image: url('pic7.png');
+
+
+.Box {
+  max-width: 440px;
+  max-height: 300px;
+  width: 100%;
+  height: 100%;
+  /*border: 2px solid black;*/
+  box-sizing: border-box;
+  overflow: hidden; /* */
 }
 
-.image-9{
-    background-image: url('pic9.png');
+.column h2{
+    text-align: center;
+    color: white;
 }
-.image-10{
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('Mcqueen_gradcap.jpg');
+    width: 400px;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    /*border: 2px solid black;*/
+    margin: 0 auto; /* Added margin to horizontally center the box */
+}
+
+.image2 {
+    background-image: url('manana\ sera\ bonito.png');
+}
+.image3 {
+    background-image: url('Mr.\ Piggy\ piggy\ bank.png');
+}
+.image4 {
+    background-image: url('Captain\ america.png');
+}
+.image5 {
+    background-image: url('Iron\ man.png');
+}
+.image6 {
+    background-image: url('Lego\ rose\ set.png');
+}
+.image7 {
+    background-image: url('Soccer\ board\ game.png');
+}
+.image8 {
+    background-image: url('3ft_bow.png');
+}
+.image9 {
     background-image: url('Jordan1.png');
 }
-.image-11{
+.image10 {
     background-image: url('jordan1-keychain.png');
 }
-.image-12{
+.image11 {
     background-image: url('dino_pencil-holder.png');
 }
-.image-13{
-    background-image: url('Jeep.png');
+.image12 {
+    background-image: url('jeep.webp');
 }
-.image-14{
+.image13 {
     background-image: url('charzard.webp');
 }
-.image-15{
+.image14 {
     background-image: url('Blastoid.webp');
 }
-.image-16{
+.image15 {
     background-image: url('pikachu.webp');
 }
-.image-17{
+.image16 {
     background-image: url('harry\ potter\ house\ bookmark.webp');
 }
-.image-18{
+.image17 {
     background-image: url('light\ saber.webp');
 }
-.image-19{
+.image18 {
     background-image: url('love\ rose\ bear.webp');
 }
-.image-20{
+.image19 {
     background-image: url('no\ stupid\ people\ sign.webp');
 }
 
+
 .column:hover .image{
-	height: 250px;
-	width: 440px;
-}
-.column h2{
-    padding: 2%;
-    color: #fff;
+    transform: scale(1.2);
 }
 
 
-/*moves the picture on homepage accordingly*/
+/*moves the picture on homepage accordingly
 @media screen and (max-width: 768px){
     .columns {
         display: flex;
@@ -316,3 +332,4 @@
         font-size: 1.5rem;
     }
 }
+*/
