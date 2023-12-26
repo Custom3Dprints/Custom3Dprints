@@ -19,7 +19,7 @@ function Links() {
     window.location.href = "3DLinks.html";
 }
 function Specials() {
-    window.location.href = "Christmas.html";
+    window.location.href = "NewYears.html";
 }
 function About() {
     window.location.href = "3DAbout.html";
@@ -27,5 +27,3 @@ function About() {
 function Order() {
     window.location.href = "3DOrder.html";
 }
-
-// this is a big testgit 
