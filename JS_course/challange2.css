@@ -1,0 +1,21 @@
+.container-1{
+    border: 1px solid black;
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.catbutton{
+    border: 1px solid black;
+}
+
+.flexbox{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    flex-wrap: wrap;
+}
+
+.flexbox img{
+    padding: 10px;
+}

@@ -1,0 +1,14 @@
+.title{
+    text-align: center;
+    background-color: wheat;
+
+}
+
+.name_input{
+    margin-left: 150px;
+    border: 1px solid black;
+    
+}
+.name{
+    border: 1px solid blue;
+}

@@ -1,0 +1,48 @@
+COP1334C - Introduction to C++ Programming
+Prof. Mary Taboada
+Summer 2022
+Arthur Allen
+
+92
+Arlette Blum
+97
+Ilan Crest
+76
+Cliff Do
+
+87
+Christina Francois
+
+97
+Matthew Garcia
+
+81
+William Irons
+
+52
+Saphire Jones
+84
+Amari Louis
+
+80
+Alexandra Macri
+78
+Sebastian Orwell
+85
+Marlene Pinheiro
+85
+Adam Quest
+76
+Jean Ross
+100
+Carla Smith
+
+60
+Cin Tian
+95
+Elizabeth Urich
+100
+Ramon Vargas
+73
+Ryan Walters
+100
