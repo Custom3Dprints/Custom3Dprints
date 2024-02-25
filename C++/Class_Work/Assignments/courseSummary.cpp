@@ -40,7 +40,7 @@ string get_file(){
 }
 
 
-int function(string file, int option){
+int Function(string file, int option){
     string dashes(50, '-');       // == ["-"]*50.py
     cout <<endl<< dashes << endl;  // displays dashes using std::endl
 
@@ -136,7 +136,7 @@ int main(){
 
     while (int Option = get_option() == 1){
         string filename = get_file();
-        function(filename,Option);
+        Function(filename,Option);
     }
     return 0;
 }
