@@ -6,7 +6,7 @@
 #include <iomanip>
 #include <ios>
 using namespace std;
-
+//comment connected????
 //get initial input and checks if valid
 int get_option(){
     int option;
