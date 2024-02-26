@@ -7,6 +7,7 @@
 #include <ios>
 using namespace std;
 
+//get initial input and checks if valid
 int get_option(){
     int option;
     
@@ -23,13 +24,14 @@ int get_option(){
             cin >> option;
             return option;
         }if (option == 2){
-            cout << "\nGood Bye ...";
+            cout << "\nGood Bye ...\n";
             return 0;
         }
         return option;
     }
 }
 
+//get file name
 string get_file(){
     cout << "\n\nGrades Summary Report ...\n\n";
     string file;
@@ -39,7 +41,7 @@ string get_file(){
     return file;
 }
 
-
+//formatting
 int Function(string file, int option){
     string dashes(50, '-');       // == ["-"]*50.py
     cout <<endl<< dashes << endl;  // displays dashes using std::endl
@@ -135,6 +137,7 @@ int Function(string file, int option){
     return 0;
 }
 
+//final output
 int main(){
     cout << "Course Summary App ...";
 
