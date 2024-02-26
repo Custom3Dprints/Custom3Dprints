@@ -101,9 +101,9 @@ int Function(string file, int option){
         //name        grade
         for(size_t j = 0;j<names.size(); j+=1){
             if (j == 4 || j == 10 || j==11){
-            cout<<names[j] << "\t\t" << grades[j]<<endl; 
+                cout<<names[j] << "\t\t" << grades[j]<<endl; 
             }else{
-                cout<< names[j] << "\t\t\t" << grades[j]<<endl;  //not evenly spaced FIX THIS LINE
+                cout<< names[j] << "\t\t\t" << grades[j]<<endl;
             }
         }
 
