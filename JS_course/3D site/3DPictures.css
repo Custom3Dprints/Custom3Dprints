@@ -240,6 +240,7 @@
     background-size: cover;
     background-position: center;
     border-radius: 4px;
+    background-color: #000000;
     /*border: 2px solid black;*/
     margin: 0 auto; /* Added margin to horizontally center the box */
 }
@@ -247,8 +248,14 @@
 .image2 {
     background-image: url('manana\ sera\ bonito.png');
 }
+.image22 {
+    background-image: url('Un_Verano_Sin_Ti_Gradcap.jpg');
+}
 .image3 {
     background-image: url('Mr.\ Piggy\ piggy\ bank.png');
+}
+.image21 {
+    background-image: url('Screenshot\ 2024-02-26\ at\ 6.03.10\ PM.png');
 }
 .image4 {
     background-image: url('Captain\ america.png');
