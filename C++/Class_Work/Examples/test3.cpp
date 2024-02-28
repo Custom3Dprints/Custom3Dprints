@@ -1,32 +1,42 @@
+// Unit 5 project workbook
+
 #include <iostream>
 #include <fstream>
-#include <vector>
-#include <numeric>
-#include <iomanip>
+using namespace std;
 
-int main() {
-    std::ifstream inputFile("Random.txt");
-    if (!inputFile.is_open()) {
-        std::cerr << "Unable to open the file.\n";
-        return 1;
+int main(){
+    ifstream myfile("Random.txt");
+    if (myfile.is_open()){
+        // Specify the path to your text file
+        string filename = "Random.txt";
+
+        // Open the file
+        ifstream inputFile(filename);
+
+        // Check if the file is successfully opened
+        if (!inputFile.is_open()) {
+            cerr << "Error opening file: " << filename << std::endl;
+            cout<< 1; // Return an error code
+        }
+
+        // Vector to store lines from the file
+        vector<string> lines;
+        int numofnums = 0;
+        // Read the file line by line
+        string line;
+        while (getline(inputFile, line)) {
+            lines.push_back(line);
+            numofnums++;
+        }
+
+        // Close the file
+        inputFile.close();
+        int sum = 0;
+        for (int i=0; i < lines.size(); i++){
+            sum = sum+stoi(lines.at(i));
+        }
+        cout << "\nNumber of numbers: " << numofnums;
+        cout << "\nSum of the numbers: "<<sum;
+        cout << "\nAverage of the numbers: "<< sum / numofnums<<endl;
     }
-
-    std::vector<int> numbers;
-    int num;
-    while (inputFile >> num) {
-        numbers.push_back(num);
-    }
-
-    inputFile.close();
-
-    int numOfNumbers = numbers.size();
-    int sumOfNumbers = std::accumulate(numbers.begin(), numbers.end(), 0);
-    double average = static_cast<double>(sumOfNumbers) / numOfNumbers;
-
-    std::cout << "Number of numbers: " << numOfNumbers << std::endl;
-    std::cout << "Sum of the numbers: " << sumOfNumbers << std::endl;
-    std::cout << std::fixed << std::setprecision(1);
-    std::cout << "Average of the numbers: " << average << std::endl;
-
-    return 0;
 }
