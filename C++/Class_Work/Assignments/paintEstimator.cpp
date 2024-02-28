@@ -5,11 +5,11 @@ using namespace std;
 
 double Price_gallons(){
     double price;
-    cout << "Paint Job Estimator ...";
+    cout << "\nPaint Job Estimator ...";
     cout << "\n\nPrice per gallon of paint (>=0): ";
     cin >> price;
     while (price < 0){
-        cout << "\nError ... Invalid price per gallon of paint. Try again.";
+        cout << "Error ... Invalid price per gallon of paint. Try again.";
         cout << "\nPrice per gallon of paint (>=0): ";
         cin >> price;
     }   
@@ -22,7 +22,7 @@ int Num_ofRooms(){
     cin >> nrooms;
     while (nrooms < 1){
         cout << "Error ... Invalid number of rooms. Try again.";
-        cout << "\n\nNumber of rooms to be painted (>=1): ";
+        cout << "\nNumber of rooms to be painted (>=1): ";
         cin >> nrooms;
     }
     return nrooms;
@@ -36,7 +36,7 @@ int SQFT(int nrooms){
         cout << "\tRoom " << i+1 << ": ";
         cin >> sqft;
         while (sqft < 25){
-            cout << "Error ... Incorrect wall space for the room. Try again.";
+            cout << "\tError ... Incorrect wall space for the room. Try again.";
             cout << "\n\tRoom " << i+1 << ": ";
             cin >> sqft;
         }
@@ -56,7 +56,7 @@ void Function(double gallonprice, double sqft, double onegallonsqft, double labo
     << "\nHours of Labor:\t\t" << labortime * Gallons //hours of labor
     << "\nCost of Labor:\t\t$ " << laborPrice * labortime * Gallons //cost of labor
     << "\n\t\t\t----------"
-    << "\nTotal Cost:\t\t$ " <<  (round(Gallons) * gallonprice) + (laborPrice * labortime * Gallons);//Total Cost
+    << "\nTotal Cost:\t\t$ " <<  (round(Gallons) * gallonprice) + (laborPrice * labortime * Gallons) <<endl;//Total Cost
 }
 
 int main(){
