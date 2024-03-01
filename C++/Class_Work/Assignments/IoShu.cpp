@@ -4,25 +4,31 @@
 #include <string>
 using namespace std;
 
-/*
-void function(){
-    int num;
-    cout << "Creating Lo Shu Square"
-    << "\n\nEnter Nine Numbers (1-9)\n";
 
-    for (int i = 1; i < 10; i+=1){ //1-9
-        cout << "\tNumber " << i << ": ";
-        cin >> num;
-        while (num < 1 || num > 9){
-            cout << "\tNumber " << i << ": ";
-            cin >> num;
+vector <int> inputs;
+
+int getnum(){
+    int numin;
+    int num = 1;
+
+    cout << "\n\nEnter Nine Numbers (1-9)\n";
+    for (int i = 0; i < 9; i++){
+        cout << "\tNumber " << num << ": ";
+        cin >> numin;
+
+        while (numin < 1 || numin > 9){
+            cout << "\tNumbers " << num << ": ";
+            cin >> numin;
         }
-        grid(7,7,num);
+        inputs.push_back(numin);
+        num++;
     }
-    
+    return 0;
 }
-*/
-void grid(const int row, const int column, int num) {
+
+/**/
+void grid(const int row, const int column) {
+    
     int count = 1;
 
     // Declaring a pointer to a 2D array
@@ -31,9 +37,7 @@ void grid(const int row, const int column, int num) {
     for (int i = 0; i < row; i++) {
         array1[i] = new string[column];
     }
-
-    //string dashes(1, '-');  // Create a string of 1 dash
-
+    
     // Initialize 2D array using loop
     for (int i = 0; i < row; i++) {
         if (i % 2 != 1) {  // Check if the row index is odd
@@ -51,18 +55,20 @@ void grid(const int row, const int column, int num) {
                 if (j % 2 == 0){
                     array1[i][j] = "|";
                 }
-                else{
-                    array1[i][j] = to_string(num);
-                }
-        /*
-                else if (j % 2 != 0){
-                    array1[i][j] = to_string(num);
-                }
-        */
             }
-            
         }
     }
+
+    //for (int p = 0; p < inputs.size(); p++){
+    //    cout << inputs[p]<<endl;
+    //}    
+    /*
+    for (int i = 0; i < row; i++){
+        for (int j = 0; j < column; j++){
+            //array1[i][j] = inputs[c]; //number inputted  
+        }
+    }
+    */
 
     // Printing the elements of the 2D array
     for (int i = 0; i < row; i++) {
@@ -77,22 +83,14 @@ void grid(const int row, const int column, int num) {
         delete[] array1[i];
     }
     delete[] array1;
+    
 }
 
 
-int main(){
-    int num;
-    cout << "Creating Lo Shu Square"
-    << "\n\nEnter Nine Numbers (1-9)\n";
 
-    for (int i = 1; i < 10; i+=1){ //1-9
-        cout << "\tNumber " << i << ": ";
-        cin >> num;
-        while (num < 1 || num > 9){
-            cout << "\tNumber " << i << ": ";
-            cin >> num;
-        }
-        grid(7,7,num);
-    }
+int main(){
+    cout << "Creating Lo Shu Square\n";
+    //getnum();
+    grid(7, 7);
     return 0;
 }
