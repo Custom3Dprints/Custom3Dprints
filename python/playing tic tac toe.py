@@ -19,6 +19,7 @@ def numerical(num):
     return board
 
 def determineWinner(board, last_play):
+    print(board)
     Wins = [last_play] * 3
     for index in range(3):
         row = board[index]
@@ -81,4 +82,5 @@ def play_game():
             return (winner)
         if i == 8 and type(winner) == None: #idk
             return("\nCongrats you both lost losers")
+
 print(play_game())
