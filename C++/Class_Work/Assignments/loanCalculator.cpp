@@ -4,7 +4,7 @@
 #include <cmath>
 using namespace std;
 
-void function(string name, string institution, double nloan, double rate, double time){
+void output(string name, string institution, double nloan, double rate, double time){
     cout << fixed << setprecision(2); //max hundredth place
     cout << "Loan Payment Calculator ..."
 
@@ -43,6 +43,6 @@ void function(string name, string institution, double nloan, double rate, double
 }
 
 int main(){
-    function("Taylor Davenport", "Davie Bank & Loans", 120000, 3.75, 30);
+    output("Taylor Davenport", "Davie Bank & Loans", 120000, 3.75, 30);
     return 0;
 }

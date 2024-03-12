@@ -3,7 +3,12 @@
 using namespace std;
 
 
-void isPrime(int number){
+
+void isPrime(){
+    int number;
+    cout << "\nEnter a number and I'll tell you whether it is prime: ";
+    cin >> number;
+
     int numofFactors = 0;
     
     for (int r = 1; r <= number; r++){
@@ -21,10 +26,7 @@ void isPrime(int number){
 } 
 
 int main(){
-    int number;
-    cout << "\nEnter a number and I'll tell you whether it is prime: ";
-    cin >> number;
-
-    isPrime(number);
+    
+    isPrime();
     return 0;
 }

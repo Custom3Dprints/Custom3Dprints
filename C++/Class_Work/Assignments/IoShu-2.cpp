@@ -19,21 +19,6 @@ void printArray(vector<vector<string> >& arr) {
     cout << "- - - - - - -\n";
 }
 
-/*
-void formatting(vector<vector<string> >& arr){
-    for(int i = 0; i < rows; ++i) {
-        for(int j = 0; j < cols; ++j) {
-            if (i %2==0){
-                arr[i][j] = "-";
-            }else{
-                if (j %2 == 0){
-                    arr[i][j] ="|";
-                }
-            }
-        }
-    }
-}
-*/
 
 void getinput(vector<vector<string> >& arr){
     vector <int>inputs;
@@ -123,7 +108,6 @@ int finaloutput(bool torf){
 }
 
 void play(){
-    //string arr[rows][cols];
     vector<vector<string> > arr(rows, vector<string>(cols));
 
     int count = 1;
@@ -139,7 +123,6 @@ void play(){
     cout << "\nArray from main function:" << endl;
 
     getinput(arr);
-    //check(arr);
     printArray(arr);
     finaloutput(check(arr));
 }
