@@ -6,16 +6,16 @@
 #include <iomanip>
 #include <ios>
 using namespace std;
-//comment connected????
+
 //get initial input and checks if valid
 int get_option(){
     int option;
     
-    cout << "\nChoose one fo the following options"
+    cout << "\nChoose one of the following options"
     << "\n\t1. Process Grades Summary report."
     << "\n\t2. Quit."
 
-    << "\n Option ";
+    << "\nOption: ";
     cin >> option;
 
     while (true){
@@ -33,7 +33,7 @@ int get_option(){
 
 //get file name
 string get_file(){
-    cout << "\n\nGrades Summary Report ...\n\n";
+    cout << "\nGrades Summary Report ...\n\n";
     string file;
     cout << "Enter file name: ";
     cin >> file;
@@ -139,7 +139,7 @@ int Function(string file, int option){
 
 //final output
 int main(){
-    cout << "Course Summary App ...";
+    cout << "\nCourse Summary App ...\n";
 
     while (int Option = get_option() == 1){
         string filename = get_file();
