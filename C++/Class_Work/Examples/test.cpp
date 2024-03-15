@@ -3,6 +3,7 @@
 #include <fstream>
 using namespace std;
 
+/*
 int main(){
     ifstream myfile("Random.txt");
     if (myfile.is_open()){
@@ -42,4 +43,12 @@ int main(){
 
     return 0;
     }
+}
+*/
+
+int main(){
+    int number = 6;
+    int x = 0;
+    x = number--;
+    cout << x << endl;
 }
