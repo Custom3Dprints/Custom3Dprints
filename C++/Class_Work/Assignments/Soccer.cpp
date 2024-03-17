@@ -54,7 +54,7 @@ void append(){
         goals.push_back(stoi(lines[i+2]));
     }
 }
-void output(){ //vectors and table
+void output(){
     cout << endl 
     << "Player Name\t\tNumber\t  Goals\n";
     string dashes(45, '-');
@@ -80,36 +80,41 @@ void totalgoals(){
 void topPlayer(){
     auto maxScore = max_element(goals.begin(), goals.end());
 
+    cout << "\nTop team player(s): ";
     for (size_t i = 0; i < goals.size(); ++i) {
         if (goals[i] == *maxScore) {
-            cout << "\nTop team player(s): " << playerName[i] << " ("<<*maxScore<<" goals)"<<endl; //fix formatting
+            cout << playerName[i] << ", ";
         }
     }
+    cout << " ("<<*maxScore<<" goals)"<<endl;
 }
 
 
 int main(){
-    cout << "\nSoccer Team Goals ...\n\n";  //AtlantaUnited
+    cout << "\nSoccer Team Goals ...\n\n";
     
     int option = getOption();
     
-
     if (option == 5){
         cout << "Good Bye ...\n";
     }else{
         string filename = getFileName();
         readfile(filename);
         append();
-        if (option == 2){
-            output();
-        }
-        else if (option == 3){
-            totalgoals();
-        }
-        else if (option == 4){
-            topPlayer();
+        switch (option){
+            case 2:
+                output();
+                break;
+            case 3:
+                totalgoals();
+                break;
+            case 4:
+                topPlayer();
+                break;
+        default:
+            break;
         }
     }
-
+    
     return 0;
 }
