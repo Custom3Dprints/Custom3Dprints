@@ -19,7 +19,7 @@ void printArray(vector<vector<string> >& arr) {
     cout << "- - - - - - -\n";
 }
 
-
+//gets input
 void getinput(vector<vector<string> >& arr){
     vector <int>inputs;
     int number;
@@ -98,6 +98,7 @@ bool check(const vector<vector<string> >& arr) {
     return true; // All sums are equal
 }
 
+//verify T or F
 int finaloutput(bool torf){
     if (torf == true){
         cout<< "This is a Lo Shu Magic Square!!!";
@@ -107,6 +108,7 @@ int finaloutput(bool torf){
     return 0;
 }
 
+//Starts game
 void play(){
     vector<vector<string> > arr(rows, vector<string>(cols));
 
@@ -127,7 +129,7 @@ void play(){
     finaloutput(check(arr));
 }
 
-
+//Final output for game
 int main() { //board
     play();
     string choice;

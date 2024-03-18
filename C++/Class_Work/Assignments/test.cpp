@@ -1,71 +1,131 @@
-//Unit 4 workbook project 2
+//optimized version:
 /*
 #include <iostream>
-#include <cmath>
+#include <fstream>
+#include <vector>
+#include <algorithm>
+#include <string_view>
+
 using namespace std;
 
-int main(){
-    cout << "Geometry Calculator\n\n";
+struct Player {
+    string name;
+    int number;
+    int goals;
+};
 
-    cout << "1. Calculate the Area of a Circle\n"
-    << "2. Calculate the Area of a Rectangle\n"
-    << "3. Calculate the Area of a Triangle\n"
-    << "4. Quit\n\n";
-
-    int choice;
-    cout << "Enter your choice (1-4): ";
-    cin >> choice;
-    while (choice < 1 || choice > 4){
-        cout << "The valid choices are 1 through 4. Run the \nprogram again and select one of those.\n";
-        cout << "Enter your choice (1-4): ";
-        cin >> choice;
+int getOption() {
+    cout << "Choose one of the following options\n"
+         << "\t1. Load team's information.\n"
+         << "\t2. Display team's roster.\n"
+         << "\t3. Display team's goals.\n"
+         << "\t4. Display team's star(s).\n"
+         << "\t5. Quit.\n";
+    int option;
+    cout << "Option: ";
+    cin >> option;
+    while (option < 1 || option > 5) {
+        cout << "Invalid option. Please enter a valid option (1-5): ";
+        cin >> option;
     }
-    
-    switch (choice){
-        case 1:
-            int radius;
-            cout << "\nEnter the circle's radius: ";
-            cin >> radius;
-    
-            if (radius < 0){
-                cout << "\nThe radius can not be less than zero.\n";
-                break;
-            }else{
-                cout << "\nThe area is " << pow(radius, 2) * 3.14159 << endl;
-                break;
-            }
-        case 2:
-            int length, width;
-            cout << "\nEnter the rectangle's length: ";
-            cin >> length;
-            cout << "Enter the rectangle's width: ";
-            cin >> width;
-    
-            if (length < 0 || width < 0){
-                cout << "\nOnly enter positive values for length and width.\n";
-                break;
-            }else{
-                cout << "\nThe area is " << length * width << endl;
-                break;
-            }
-        case 3:
-            int height, base;
-            cout << "Enter the length of the base: ";
-            cin >> base;
-            cout << "Enter the triangle's height: ";
-            cin >> height;
-    
-            if (height < 0 || base < 0){
-                cout << "\nOnly enter positive values for length and width.\n";
-                break;
-            }else{
-                cout << "\nThe area is " << base * height * .5 << endl;
-                break;
-            }
-        default:
-            cout << "Program ending.\n";
-            break;
+    cout << endl;
+    return option;
+}
+
+string getFileName() {
+    string file;
+    cout << "Enter File Name: ";
+    cin >> file;
+    return file;
+}
+
+void readFile(const string& file, vector<string>& lines) {
+    ifstream myfile(file);
+    if (myfile.is_open()) {
+        string line;//
+        while (getline(myfile, line)) {
+            lines.push_back(line);
+        }
+        myfile.close();
     }
 }
+
+void parseData(const vector<string>& lines, vector<Player>& players) { //
+    for (size_t i = 0; i < lines.size(); i += 3) {
+        Player player;                      
+        player.name = lines[i];               
+        player.number = stoi(lines[i + 1]);    
+        player.goals = stoi(lines[i + 2]);    
+        players.push_back(player);
+    }
+}
+
+void displayRoster(const vector<Player>& players) {
+    cout << "\nPlayer Name\t\tNumber\t  Goals\n";
+    string dashes(45, '-');
+    cout << dashes << endl;
+    for (const auto& player : players) { //
+        if (player.name.size() >= 8) {
+            cout << player.name << "\t\t  " << player.number << "\t\t" << player.goals << endl;
+        } else {
+            cout << player.name << "\t\t\t  " << player.number << "\t\t" << player.goals << endl;
+        }
+    }
+}
+
+void displayTotalGoals(const vector<Player>& players) {
+    int totalGoals = 0;
+    for (const auto& player : players) {
+        totalGoals += player.goals;
+    }
+    cout << "\nTotal goals scored: " << totalGoals << endl;
+}
+
+void displayTopPlayers(const vector<Player>& players) {
+    int maxGoals = 0;
+    for (const auto& player : players) {
+        maxGoals = max(maxGoals, player.goals);
+    }
+
+    cout << "\nTop team player(s): ";
+    for (const auto& player : players) {
+        if (player.goals == maxGoals) {
+            cout << player.name << ", ";
+        }
+    }
+    cout << " (" << maxGoals << " goals)" << endl;
+}
+
+int main() {
+    cout << "\nSoccer Team Goals ...\n\n";
+    
+    int option = getOption();
+    
+    if (option == 5) {
+        cout << "Good Bye ...\n";
+    } else {
+        string filename = getFileName();
+        vector<string> lines;
+        readFile(filename, lines);
+        vector<Player> players;
+        parseData(lines, players);
+        
+        switch (option) {
+            case 2:
+                displayRoster(players);
+                break;
+            case 3:
+                displayTotalGoals(players);
+                break;
+            case 4:
+                displayTopPlayers(players);
+                break;
+            default:
+                break;
+        }
+    }
+    
+    return 0;
+}
+
 */
- 

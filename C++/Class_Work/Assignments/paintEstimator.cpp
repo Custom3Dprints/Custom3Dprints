@@ -3,7 +3,7 @@
 #include <iomanip>
 using namespace std;
 
-double Price_gallons(){
+double Price_gallons(){ //gets price of gallons
     double price;
     cout << "\nPaint Job Estimator ...";
     cout << "\n\nPrice per gallon of paint (>=0): ";
@@ -16,7 +16,7 @@ double Price_gallons(){
     return price;
 }
 
-int Num_ofRooms(){
+int Num_ofRooms(){ //gets the number of rooms
     int nrooms;
     cout << "\n\nNumber of rooms to be painted (>=1): ";
     cin >> nrooms;
@@ -28,7 +28,7 @@ int Num_ofRooms(){
     return nrooms;
 }
 
-int SQFT(int nrooms){
+int SQFT(int nrooms){ // sqft per room
     int sqft;
     int total_sqft = 0;
     cout << "\n\nSquare feet of wall space (>=25)\n";
@@ -45,7 +45,7 @@ int SQFT(int nrooms){
     return total_sqft;
 }
 
-void Function(double gallonprice, double sqft, double onegallonsqft, double labortime, double laborPrice){
+void Function(double gallonprice, double sqft, double onegallonsqft, double labortime, double laborPrice){ //all output formatting
     double Gallons = sqft/onegallonsqft;
     cout << fixed <<setprecision(2) 
     << "\n\tPaint Job Estimate"
@@ -59,7 +59,7 @@ void Function(double gallonprice, double sqft, double onegallonsqft, double labo
     << "\nTotal Cost:\t\t$ " <<  (round(Gallons) * gallonprice) + (laborPrice * labortime * Gallons) <<endl;//Total Cost
 }
 
-int main(){
+int main(){ //calling all functions^
     double price_per_gallon = Price_gallons();
     int Rooms = Num_ofRooms();
     int Total_Sqft = SQFT(Rooms);

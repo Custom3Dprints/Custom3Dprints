@@ -6,6 +6,7 @@
 #include <algorithm>
 using namespace std;
 
+//Gets input from user
 int getOption(){
     cout << "Choose one of the following options\n"
     << "\t1. Load team's information.\n"
@@ -24,6 +25,7 @@ int getOption(){
     return get_option;
 }
 
+//gets file name
 string getFileName(){
     string file;
     cout << "Enter File Name: ";
@@ -38,15 +40,18 @@ vector<string>playerName;
 vector<int>number;
 vector<int>goals;
 
+//opens and closes .txt file
 void readfile(string file){
     fstream myfile(file);
     if (myfile.is_open()){
         while (getline(myfile, line)){
             lines.push_back(line);
         }
+        myfile.close();
     }
-    myfile.close();
 }
+
+//appends to vectors
 void append(){
     for (int i=0; i < lines.size(); i+=3){
         playerName.push_back(lines[i]);
@@ -54,6 +59,8 @@ void append(){
         goals.push_back(stoi(lines[i+2]));
     }
 }
+
+//table output
 void output(){
     cout << endl 
     << "Player Name\t\tNumber\t  Goals\n";
@@ -69,6 +76,7 @@ void output(){
 
 }
 
+//Total goals
 void totalgoals(){
     int total = 0;
     for (int i=0; i < goals.size(); i++){
@@ -77,6 +85,7 @@ void totalgoals(){
     cout <<  "\nTotal goals scored: "<<total<<endl;
 }
 
+//Best player
 void topPlayer(){
     auto maxScore = max_element(goals.begin(), goals.end());
 
@@ -89,7 +98,7 @@ void topPlayer(){
     cout << " ("<<*maxScore<<" goals)"<<endl;
 }
 
-
+//final calling of functions
 int main(){
     cout << "\nSoccer Team Goals ...\n\n";
     
@@ -118,3 +127,4 @@ int main(){
     
     return 0;
 }
+
