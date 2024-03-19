@@ -1,21 +1,15 @@
-#CODE IS NOT PERFECT OR DONE
-    #needs to run determinewinner function
-        #if there is a winner then it needs to stop the game and prompt if the user wants to play another
-    #Not all formatting is correct: spacing, punctuation etc
-#DOUBLE CHECK ALL OF THE CODE
-
 #Formatting the board
 def Board():
     #board = [([v]*9) for v in range(4)] #the way i make 2d lists#
     board = [[" " for _ in range(4)] for _ in range(4)] #smart chatgpt way of makeing 2d list for this special situation#
 
-    board[0][0] = "R/C" #easy hard code reasign same thing can be done with for loop if you want#
-    board[0][1] = "0"   #easy hard code reasign same thing can be done with for loop if you want#
-    board[0][2] = "1"   #easy hard code reasign same thing can be done with for loop if you want#
-    board[0][3] = "2"   #easy hard code reasign same thing can be done with for loop if you want# 
-    board[1][0] = "0"   #easy hard code reasign same thing can be done with for loop if you want# 
-    board[2][0] = "1"   #easy hard code reasign same thing can be done with for loop if you want# 
-    board[3][0] = "2"   #easy hard code reasign same thing can be done with for loop if you want# 
+    board[0][0] = "R/C" 
+    board[0][1] = "0"   
+    board[0][2] = "1"   
+    board[0][3] = "2"   
+    board[1][0] = "0"   
+    board[2][0] = "1"   
+    board[3][0] = "2"   
     
     return board
 
@@ -76,11 +70,9 @@ def determineWinner(board, turn):
         column = [board[i][index] for i in range(3)]
         diagonal = [board[i][i] for i in range(3)]
         diagonal2 = [board[2-i][i] for i in range(3)]
-        
+
         if column == Wins or row == Wins or diagonal == Wins or diagonal2 == Wins:
             return True
-        else:
-            return False
 
 #runs all the function
 def playing():
@@ -91,11 +83,14 @@ def playing():
         validinput = True_input(turn)
         placer = place(board, validinput, turn)
         
-        printBoard(placer)
-        checking = determineWinner(placer, turn)
-        if  checking == True:
+        #print(determineWinner(placer, turn))
+        #printBoard(placer)
+
+        if  determineWinner(placer, turn) == True:
             print(f"\n{turn} IS THE WINNER!!!")
             return True
+        else:
+            printBoard(placer)
 
 #loops the playing function and askes for another game
 def main():
