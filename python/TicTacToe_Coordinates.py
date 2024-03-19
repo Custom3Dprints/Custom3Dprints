@@ -82,9 +82,6 @@ def playing():
         turn = get_turn(i)
         validinput = True_input(turn)
         placer = place(board, validinput, turn)
-        
-        #print(determineWinner(placer, turn))
-        #printBoard(placer)
 
         if  determineWinner(placer, turn) == True:
             print(f"\n{turn} IS THE WINNER!!!")
