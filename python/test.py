@@ -1,48 +1,109 @@
+#CODE IS NOT PERFECT OR DONE
+    #needs to run determinewinner function
+        #if there is a winner then it needs to stop the game and prompt if the user wants to play another
+    #Not all formatting is correct: spacing, punctuation etc
+#DOUBLE CHECK ALL OF THE CODE
+
+#Formatting the board
+def Board():
+    #board = [([v]*9) for v in range(4)] #the way i make 2d lists#
+    board = [[" " for _ in range(4)] for _ in range(4)] #smart chatgpt way of makeing 2d list for this special situation#
+
+    board[0][0] = "R/C" #easy hard code reasign same thing can be done with for loop if you want#
+    board[0][1] = "0"   #easy hard code reasign same thing can be done with for loop if you want#
+    board[0][2] = "1"   #easy hard code reasign same thing can be done with for loop if you want#
+    board[0][3] = "2"   #easy hard code reasign same thing can be done with for loop if you want# 
+    board[1][0] = "0"   #easy hard code reasign same thing can be done with for loop if you want# 
+    board[2][0] = "1"   #easy hard code reasign same thing can be done with for loop if you want# 
+    board[3][0] = "2"   #easy hard code reasign same thing can be done with for loop if you want# 
+    
+    return board
+
+#prints board
+def printBoard(board):
+    for row in board:
+        print(" ".join(["-"]*9))
+        print("| " + " | ".join(row) + " |")
+
+#Determines whos turn it is
+def get_turn(i):
+    if i % 2 == 0:
+        return "X"
+    else:
+        return "O"
+
+#takes input and only outputs valid input
+plays = []
+def True_input(turn):
+    print(f"{turn}'s turn.")
+    play = (input(f"Where do you want your {turn} placed?\nPlease enter row number and column number separated by a comma.\n"))
+    print(f"You have entered row #{play[0]}\n\t  and column #{play[2]}")
+    
+    if int(play[0]) in range(0,3) and int(play[2]) in range(0,3) and (play[0], play[2]) not in plays:
+        print("Thank you for your selection.")
+        plays.append((play[0], play[2]))
+        return (play[0], play[2])
+    else:
+        while (play[0], play[2]) in plays:
+            play = (input(f"Where do you want your {turn} placed?\nPlease enter row number and column number separated by a comma.\n"))
+            print("Invalid entry: try again\nThat cell is already taken.\nPlease make another selection.")
+        while int(play[0]) not in range(0,3) or int(play[2]) not in range(0,3):
+            print("Invalid entry: try again\nRow & column numbers must be either 0, 1, or 2.")
+            play = (input(f"Where do you want your {turn} placed?\nPlease enter row number and column number separated by a comma.\n"))
+
+#Gets the valid input and updates the board
+def place(board, validinput, turn):
+    x = validinput[0]
+    y = validinput[1]
+    var1 = 0
+    var2 = 0
+    for rnum, row in enumerate(board):
+        if str(y) == board[rnum][0]:
+            var1 = rnum
+        for cnum, col in enumerate(row):
+            if str(x) == board[0][cnum]:
+                var2 = cnum
+    
+    board[var1][var2] = turn
+    return board
+
+#creates smaller lists to help determine winner
+def determineWinner(board, turn):
+    board = [board[1][1:], board[2][1:], board[3][1:]]
+    Wins = [turn] * 3
+    for index in range(3):
+        row = board[index]
+        column = [board[i][index] for i in range(3)]
+        diagonal = [board[i][i] for i in range(3)]
+        diagonal2 = [board[2-i][i] for i in range(3)]
+        
+        if column == Wins or row == Wins or diagonal == Wins or diagonal2 == Wins:
+            return True
+        else:
+            return False
+
+#runs all the function
+def playing():
+    print(f"New game: X goes first.")
+    board = Board()
+    for i in range(9):
+        turn = get_turn(i)
+        validinput = True_input(turn)
+        placer = place(board, validinput, turn)
+        
+        printBoard(placer)
+        checking = determineWinner(placer, turn)
+        if  checking == True:
+            print(f"\n{turn} IS THE WINNER!!!")
+            return True
+
+#loops the playing function and askes for another game
 def main():
-    # display a welcome message
-    print("Welcome to the Future Value Calculator\n")
+    play = playing()
+    
+    while play == True:
+        anothergame = input("Another game? Enter Y or y for yes.\n")
+        if anothergame == "Y" or anothergame == "y" or anothergame == "yes":
+            playing()
 
-    choice = "y"
-    while choice.lower() == "y":
-
-        # get input from the user
-        monthly_investment = float(input("Enter monthly investment:\t"))
-        while monthly_investment <= 0:
-            print("Entry must be greater than 0. Please try again.")
-            monthly_investment = float(input("Enter monthly investment:\t"))
-            
-        yearly_interest_rate = float(input("Enter yearly interest rate:\t"))
-        while yearly_interest_rate <= 0 or yearly_interest_rate > 15:
-            print("Entry must be greater than 0 and less than or equal to 15.\nPlease try again.")
-            yearly_interest_rate = float(input("Enter yearly interest rate:\t"))
-            
-        years = int(input("Enter number of years:\t\t"))
-        while years <= 0 or years > 50:
-            print("Entry must be greater than 0 and less than or equal to 50.\nPlease try again.")
-            years = int(input("Enter number of years:\t\t\n"))
-            
-        # convert yearly values to monthly values
-        monthly_interest_rate = yearly_interest_rate / 12 / 100 
-        months = years * 12  ##Var not used
-
-        # calculate the future value
-        future_value = 0
-        for i in range(years): ## changed from months to years
-            future_value += monthly_investment                               ##Your math is wrong:(
-            monthly_interest_amount = future_value * monthly_interest_rate   ##Your math is wrong:(
-            future_value += monthly_interest_amount                          ##Your math is wrong:(
-            
-            # display the result
-            ## i == years but technecilly starts counting from 0 so i just add one
-            print(f"Year = {i+1}\tFuture value = {round(future_value, 2)}")
-            
-        # see if the user wants to continue
-        choice = input("\nContinue (y/n)?\n")
-
-    print("\nBye!")  ##\n = next line or enter
-
-main() ##this is the correct way to call a function unless specified by ur professor
-##Technacally you dont need this code below
-
-#if __name__ == "__main__":   # if this module is the main module
-#    main()                   # call the main()function
+main()

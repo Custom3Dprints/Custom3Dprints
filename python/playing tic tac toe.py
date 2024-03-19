@@ -1,3 +1,4 @@
+
 def Board():
     board = [([v]*5) for v in range(5)]
 
@@ -70,6 +71,7 @@ def get_place(play, placer):
     return check_board
 
 def play_game():
+    
     for i in board:
         print(" ".join([str(a) for a in i]))
 
@@ -84,3 +86,4 @@ def play_game():
             return("\nCongrats you both lost losers")
 
 print(play_game())
+        
