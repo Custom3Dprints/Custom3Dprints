@@ -39,8 +39,8 @@ def True_input(turn):
         return (play[0], play[2])
     else:
         while (play[0], play[2]) in plays:
-            play = (input(f"Where do you want your {turn} placed?\nPlease enter row number and column number separated by a comma.\n"))
             print("Invalid entry: try again\nThat cell is already taken.\nPlease make another selection.")
+            play = (input(f"Where do you want your {turn} placed?\nPlease enter row number and column number separated by a comma.\n"))
         while int(play[0]) not in range(0,3) or int(play[2]) not in range(0,3):
             print("Invalid entry: try again\nRow & column numbers must be either 0, 1, or 2.")
             play = (input(f"Where do you want your {turn} placed?\nPlease enter row number and column number separated by a comma.\n"))
@@ -78,16 +78,17 @@ def determineWinner(board, turn):
 def playing():
     print(f"New game: X goes first.")
     board = Board()
+    printBoard(board)
     for i in range(9):
         turn = get_turn(i)
         validinput = True_input(turn)
         placer = place(board, validinput, turn)
 
+        printBoard(placer)
         if  determineWinner(placer, turn) == True:
             print(f"\n{turn} IS THE WINNER!!!")
             return True
-        else:
-            printBoard(placer)
+            
 
 #loops the playing function and askes for another game
 def main():
@@ -97,5 +98,7 @@ def main():
         anothergame = input("Another game? Enter Y or y for yes.\n")
         if anothergame == "Y" or anothergame == "y" or anothergame == "yes":
             playing()
+        else:
+            return False
 
 main()
