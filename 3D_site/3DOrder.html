@@ -58,47 +58,88 @@
         </div>
     </nav>
 
-    
-    <!--Services Section CSS-->
-    <div class="main">
+    <!--WORKS
+        <div class="container">
+            <form id="contact-form" class="row">
+                <h3>PERSONAL INFORMATION</h3>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                
+                <label for="phoneNumber">Phone Number</label><br>
+                <input type="tel" id="phoneNumber" name="phoneNumber"><br>
+                
+                
+                <h3>PRINT INFORMATION</h3>
+                <label for="printname">Name of Print:</label><br>
+                <input type="text" id="printname" name="printname"><br>
+                
+                
+                <label for="printlink">Print link:</label><br>
+                <input type="text" id="printlink" name="printlink"><br>
+                
+                <label for="description">Description:</label><br>
+                <textarea name="description" id="description" cols="30" rows="4"></textarea><br>
+                
+                <label for="size">Size of Print:</label><br>
+                <input type="text" id="printSize" placeholder="maximum size: 256mm cubed" style="width: 6cm;"><br>
+                
+                <label for="colors">Colors:</label><br>
+                <input type="text" id="printColors" placeholder="Up to 4 colors"><br><br>
+                
+                <button id="submitbutton" onclick="main()">Submit</button>
+            </form>
+        </div>
+    -->
 
-        <div class="main__container"> 
-            <h1>Order:</h1><br>
-            <form id="contact-form" class="row"> <!--rows -->
-                <div class="info"> <!--cols -->
-                    <h3>Contact Information</h3>
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name"><br>
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email"><br>    
-                    <label for="phoneNumber">Phone Number</label><br>
-                    <input type="tel" id="phoneNumber" name="phoneNumber"><br>
-                </div>
-                <div class="info">
-                    <div class="printinfo">
-                        <h3>Print Information</h3>
+
+    <div class="container">
+        <div class="content">
+            <form id="contact-form">
+                <div class="row">
+                    <div class="col">
+                        <h3>PERSONAL INFORMATION</h3>
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name"><br>
+                        
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email"><br>
+                        
+                        <label for="phoneNumber">Phone Number</label><br>
+                        <input type="tel" id="phoneNumber" name="phoneNumber"><br>
+                    </div>
+                    
+                    <div class="col">
+                        
+                        <h3>PRINT INFORMATION</h3>
                         <label for="printname">Name of Print:</label><br>
                         <input type="text" id="printname" name="printname"><br>
+                        
+                        
                         <label for="printlink">Print link:</label><br>
                         <input type="text" id="printlink" name="printlink"><br>
+                        
                         <label for="description">Description:</label><br>
-                        <textarea class="textarea" name="description" id="description" cols="20" rows="4" style="max-width: 300px; max-height: 100px;"></textarea><br>
+                        <textarea name="description" id="description" cols="30" rows="4"></textarea><br>
+                        
                         <label for="size">Size of Print:</label><br>
-                        <input type="text" id="printSize" placeholder="length x width x height" style="width: 6cm;"><br>
+                        <input type="text" id="printSize" placeholder="maximum size: 256mm cubed" style="width: 6cm;"><br>
+                        
                         <label for="colors">Colors:</label><br>
                         <input type="text" id="printColors" placeholder="Up to 4 colors"><br><br>
                     </div>
-                    
                 </div>
+                <div class="centeredbutton"><button class="button" id="submitbutton" onclick="main()">Submit</button></div>
             </form>
-            <div class="outerbutton">
-                <br><button class= "button" id="submitbutton" onclick="main()">Submit</button><br><br>
-            </div>
         </div>
     </div>
 
-    <div class="bottom-wrap">
 
+
+        
+    <div class="bottom-wrap">
         <div class="bottom-row">
             <div class="bottom-cols">
                 <h2>Connect with me:</h2>

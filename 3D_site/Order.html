@@ -8,39 +8,39 @@
 <body>
     <div class="container">
         <form id="contact-form" class="row">
-                <h3>PERSONAL INFORMATION</h3>
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name"><br>
-                
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br>
-  
-                <label for="phoneNumber">Phone Number</label><br>
-                <input type="tel" id="phoneNumber" name="phoneNumber"><br>
+            <h3>PERSONAL INFORMATION</h3>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+
+            <label for="phoneNumber">Phone Number</label><br>
+            <input type="tel" id="phoneNumber" name="phoneNumber"><br>
 
 
-                <h3>PRINT INFORMATION</h3>
-                <label for="printname">Name of Print:</label><br>
-                <input type="text" id="printname" name="printname"><br>
+            <h3>PRINT INFORMATION</h3>
+            <label for="printname">Name of Print:</label><br>
+            <input type="text" id="printname" name="printname"><br>
 
 
-                <label for="printlink">Print link:</label><br>
-                <input type="text" id="printlink" name="printlink"><br>
+            <label for="printlink">Print link:</label><br>
+            <input type="text" id="printlink" name="printlink"><br>
 
-                <label for="description">Description:</label><br>
-                <textarea name="description" id="description" cols="30" rows="4"></textarea><br>
+            <label for="description">Description:</label><br>
+            <textarea name="description" id="description" cols="30" rows="4"></textarea><br>
 
-                <label for="size">Size of Print:</label><br>
-                <input type="text" id="printSize" placeholder="maximum size: 256mm cubed" style="width: 6cm;"><br>
+            <label for="size">Size of Print:</label><br>
+            <input type="text" id="printSize" placeholder="maximum size: 256mm cubed" style="width: 6cm;"><br>
 
-                <label for="colors">Colors:</label><br>
-                <input type="text" id="printColors" placeholder="Up to 4 colors"><br><br>
-                
-                <button id="submitbutton" onclick="main()">Submit</button>
+            <label for="colors">Colors:</label><br>
+            <input type="text" id="printColors" placeholder="Up to 4 colors"><br><br>
+
+            <button id="submitbutton" onclick="main()">Submit</button>
         </form>
-
-
-
+    </div>
+        
+    
     <!--Include EmailJS SDK-->
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="Order.js"></script> 
@@ -48,71 +48,3 @@
 </body>
 </html>
 
-<!--
-    <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Order.css" />
-    <title>Order</title>
-</head>
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h3 class="title">INFORMATION</h3>
-                <div class="inputBox">
-                    <span>Full Name:</span>
-                    <input id="fullName" placeholder="john deo">
-                </div>
-                <div class="inputBox">
-                    <span>Email:</span>
-                    <input id="email" type="email" placeholder="example@example.com">
-                </div>
-                <div class="inputBox">
-                    <span>Phone Number:</span>
-                    <input id="phoneNumber" type="text" placeholder="0123456789">
-                </div>
-            </div>
-            <div class="cols">
-                <h3>PRINT INFORMATION</h3>
-                <div class="inputbox">
-                    <span>Print Name: </span>
-                    <input id="printName" type="text" placeholder="Articulated Heart Dragon" style="width: 200px;">
-                </div>
-                <div class="inputbox">
-                    <span>Print link: </span>
-                    <input id="printlink" type="text" placeholder="https://www.printables.com/model/734554-my-dream-dragon-heart-dragon-flexi" style="width: 300px;">
-                </div>
-                <div class="inputbox">
-                    <p>Description:</p>
-                    <span><textarea id="description" class="textarea"></textarea></span>
-                </div>
-                <div class="inputbox">
-                    <span>Size (max size 250mm cubic):</span>
-                    <input id="printSize" type="text" placeholder="50mm x 100mm x 40mm" style="width: 200px;">
-                </div>
-                <div class="inputbox">
-                    <span>Up to 4 Colors:</span>
-                    <input id="printColors" type="text" placeholder="red, black, white, purple" style="width: 200px;">
-                </div>
-                
-            </div>
-            <div class="cols">
-                <h3>Payment</h3>
-                <div class="inputbox">
-                    <p>Cash</p>
-                    <p>Zelle</p>
-                </div>
-            </div>
-        
-        <div class="button">
-            <button class="submitbutton" onclick="main()">Submit</button>
-        </div>
-
-    <script src="Order.js"></script>    
-</body>
-</html>
-
-
--->
