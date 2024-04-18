@@ -56,10 +56,12 @@ function main() {
                 emailjs.send("3dserviceemail", "template_biaflkd", formData)
                     .then(function(response) {
                         console.log('Success!', response.status, response.text);
-                        //Cwindow.location.href = 'OrderSucesspage.html';
+                        window.location.href = 'OrderSucesspage.html';
                     }, function(error) {
                         console.log('Failed!', error);
                         //window.location.href = 'OrderErrorpage.html';
+                        //wait 4 seconds setTimer(function, 4000){}
+                        //window.location.href = 'Order.html';
                     });
             });
         })();
