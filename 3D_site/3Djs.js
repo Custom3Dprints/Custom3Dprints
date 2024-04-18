@@ -51,7 +51,7 @@ function Submitbutton(){
     console.log("Print Colors:", printColors);
 
     //if every spot needs to be filled out
-    if (fullName == "" || email == "" || phoneNumber == "" || printname == "" || printlink == "" || description == "" || printSize == "" || printColors == ""){
+    if (fullName == "" || email == "" || phoneNumber == "" || printname == "" || description == "" || printSize == "" || printColors == ""){
         alert("You're missing some information. Please double check the informetion entered before clicking submit again.");
         return false;
     }
