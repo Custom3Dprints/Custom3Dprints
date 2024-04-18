@@ -208,7 +208,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
+
 }
 
 .main__container{
@@ -216,7 +216,7 @@
     max-width: 1000px;
     display: flex;
     justify-content: center;
-    border: 2px dashed green;
+    
 }
 
 
@@ -247,7 +247,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    border: 2px solid rgb(197, 39, 39);
+    
 }
 
 .main__link{
@@ -261,8 +261,6 @@
     
     color: #000000;
     transition: 0.3s ease-out;
-
-    border: 2px solid rgb(42, 85, 195);
     
 }
 .main__link a{
