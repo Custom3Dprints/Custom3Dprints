@@ -89,7 +89,7 @@ function main() {
                     console.log('Success!', response.status, response.text);
                     window.location.href = 'OrderSucesspage.html';
                 }, function(error) {
-                    alert("Nope try again");
+                    
                     console.log('Failed!', error);
                     //window.location.href = 'OrderErrorpage.html';
                     //wait 4 seconds setTimer(function, 4000){}
@@ -127,10 +127,7 @@ function main() {
                 });
             });
         })();
-    }else{
-        alert("fail");
     }
-       
 }
     
     

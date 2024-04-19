@@ -336,31 +336,36 @@
 
 
 
-  @media screen and (max-width: 600px) {
-    .row {
-      flex-direction: column; /* Stack columns vertically */
-      height: auto; /* Remove fixed height */
-    }
-  
-    .col {
-      width: 100%; /* Each column takes full width */
-      max-width: unset; /* Remove max-width */
-      padding: 0; /* Remove padding */
-      margin-bottom: 20px; /* Add margin between columns */
-      text-align: center;
-      justify-content: center;
-    }
-  
-    .button {
-      width: 100%; /* Button takes full width */
-      margin-top: 20px; /* Add space between button and form */
-    }
-
-    .bottom-cols h2{
-        font-size: 16px;
-    }
-    .bottom-cols p{
-        font-size: 12px;
-    }
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column; /* Stack columns vertically */
+    height: auto; /* Remove fixed height */
   }
+
+  .col {
+    width: 100%; /* Each column takes full width */
+    max-width: unset; /* Remove max-width */
+    padding: 0; /* Remove padding */
+     /* Add margin between columns */
+    text-align: center;
+    justify-content: center;
+  }
+
+  .col:first-child{
+    height: 220px;
+  }
+
+  .button {
+    width: 100%; /* Button takes full width */
+    margin-top: 20px; /* Add space between button and form */
+  }
+  .bottom-cols h2{
+      font-size: 16px;
+  }
+  .bottom-cols p{
+      font-size: 12px;
+  }
+
+
+}
   
