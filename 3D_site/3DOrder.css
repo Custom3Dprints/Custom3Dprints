@@ -201,7 +201,7 @@
 
 /*Input Container*/
 .main{
-    border: 2px solid black;
+    /*border: 2px solid black;*/
 }
 .container{
     /*border: 2px solid black;*/
@@ -219,17 +219,18 @@
 
 .content{
     /*border: 2px dashed green;*/
-    border: 2px dashed green;
+
     
     width: max-content;
+    margin-bottom: 80px;
 }
 
 .row{
     /*border: 2px solid rgb(197, 39, 39);*/
-    border: 2px solid rgb(197, 39, 39);
+
     
     width: 800px;
-    height: 500px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,7 +241,7 @@
 
 .col{
     /*border: 2px solid rgb(42, 85, 195);*/
-    border: 2px solid rgb(42, 85, 195);
+
     
     height: 400px;
     max-width: 1000px;
@@ -252,11 +253,6 @@
     width: 50%; /* Each column takes half of the container width */
     box-sizing: border-box; /* Include padding and border in the width */
     padding: 0 10px; /* Add some spacing between columns */
-
-
-
-
-
 }
 
 .col h3{
