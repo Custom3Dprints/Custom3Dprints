@@ -318,31 +318,3 @@
 }
 
 
-/*moves the picture on homepage accordingly
-@media screen and (max-width: 768px){
-    .columns {
-        display: flex;
-        justify-content: center;
-        
-    }
-    
-    .image {
-        background-position: center;
-        border-radius: 4px;
-    }
-
-    .column h2{
-        position: relative;
-        color: #fff;
-        padding: 8px;
-        padding-top: 20px;
-    }
-}
-
-@media screen and (max-width: 480px){
-    
-    .column h2{
-        font-size: 1.5rem;
-    }
-}
-*/

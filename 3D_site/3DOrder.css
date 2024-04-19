@@ -200,43 +200,63 @@
 }
 
 /*Input Container*/
+.main{
+    border: 2px solid black;
+}
 .container{
     /*border: 2px solid black;*/
     
+    
+    margin: 20px;
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     height: 70vh; /* Make the container full height of the viewport */
+
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .content{
     /*border: 2px dashed green;*/
+    border: 2px dashed green;
     
     width: max-content;
 }
 
 .row{
     /*border: 2px solid rgb(197, 39, 39);*/
+    border: 2px solid rgb(197, 39, 39);
     
-    width: 1000px;
+    width: 800px;
     height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    
+    flex-wrap: wrap;
 }
 
 .col{
     /*border: 2px solid rgb(42, 85, 195);*/
-    
+    border: 2px solid rgb(42, 85, 195);
     
     height: 400px;
     max-width: 1000px;
     max-height: 500px;
-    
-    
-    padding-left: 60px; /* Add padding to each column */
-    padding-right: 60px; /* Add padding to each column */
-    padding-top: 60px; /* Add padding to each column */
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 60px;
+
+    width: 50%; /* Each column takes half of the container width */
+    box-sizing: border-box; /* Include padding and border in the width */
+    padding: 0 10px; /* Add some spacing between columns */
+
+
+
+
+
 }
 
 .col h3{
@@ -269,7 +289,7 @@
     border-radius: 1;
 }
 
-/*Footer*/
+/*Footer
 .bottom-wrap{
     position: fixed;
     bottom: 0;
@@ -280,83 +300,71 @@
 
 .bottom-row{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Three columns with equal width */
-    gap: 20px; /* Gap between columns */
-}
-
-
-
-/*
-.main__content{ 
-    color: #000000;
-    max-width: 860px;
-    text-align: center;
-}
-
-.main__content h1{
-    padding-top: 2%;
-    padding-bottom: 2%;
-    
-}
-
-.main__content h2{
-    padding-bottom: 3%;
-}
-
-.main__content p{
-    padding-bottom: 2%;    
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
 }
 */
 
-
-
-
-/*moves the picture on homepage accordingly*/
-@media screen and (max-width: 768px){
-    .main__container{
-        display: grid;
-        grid-template-columns: auto;
-        align-items: center;
-        justify-self: center;
-        width: 100%;
-        margin: 0 auto;
-        height: 90vh;
-    }
-
-    .main__content{
-        text-align: center;
-        margin-bottom: 4rem;
-    }
-
-    .main__content h1{
-        font-size: 2.5rem;
-        margin-top: 2rem;
-    }
-
-    .main__content h2{
-        font-size: 3rem;
-    }
-
-    .main__content p{
-        margin-top: 1rem;
-        font-size: 1.5rem;
-    }
+/* Footer */
+.bottom-wrap {
+    
+    bottom: 0;
+    left: 0; /* Adjusted left alignment */
+    width: 100%; /* Ensure full width */
+    display: flex;
+    flex-wrap: wrap; /* Allow content to wrap */
+    justify-content: center; /* Center content horizontally */
+    
+    padding: 20px 0; /* Add padding for spacing */
+    
 }
 
-@media screen and (max-width: 480px){
-    .main__content h1{
-        font-size: 2rem;
-        margin-top: 3rem;
-    }
-    
-    .main__content h2{
-        font-size: 2rem;
-    }
-    
-    .main__content p{
-        margin-top: 2rem;
-        font-size: 1.5rem;
-    }
+.bottom-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow content to wrap */
+    justify-content: space-around; /* Spread content evenly */
+    max-width: 1300px; /* Limit maximum width */
+    width: 100%; /* Ensure full width */
+    padding: 0 20px; /* Add padding for spacing */
 }
 
+.bottom-cols {
+    flex: 0 1 300px; /* Allow items to grow, shrink, and have a preferred width */
+    max-width: 300px; /* Limit maximum width */
+    padding: 0 10px; /* Add padding for spacing */
+    margin-bottom: 20px; /* Add margin for spacing */
+    
+}
+  
+  
 
+
+
+  @media screen and (max-width: 600px) {
+    .row {
+      flex-direction: column; /* Stack columns vertically */
+      height: auto; /* Remove fixed height */
+    }
+  
+    .col {
+      width: 100%; /* Each column takes full width */
+      max-width: unset; /* Remove max-width */
+      padding: 0; /* Remove padding */
+      margin-bottom: 20px; /* Add margin between columns */
+      text-align: center;
+      justify-content: center;
+    }
+  
+    .button {
+      width: 100%; /* Button takes full width */
+      margin-top: 20px; /* Add space between button and form */
+    }
+
+    .bottom-cols h2{
+        font-size: 16px;
+    }
+    .bottom-cols p{
+        font-size: 12px;
+    }
+  }
+  
