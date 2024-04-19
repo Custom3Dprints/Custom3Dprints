@@ -356,7 +356,7 @@
   }
 
   .button {
-    width: 50%; /* Button takes full width */
+    width: 40%; /* Button takes full width */
     margin-top: 20px; /* Add space between button and form */
   }
   .bottom-cols h2{
