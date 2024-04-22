@@ -100,6 +100,9 @@ void topPlayer(){
 
 //final calling of functions
 int main(){
+    readfile("COP1334C.txt");
+    //cout << lines;
+    /*
     cout << "\nSoccer Team Goals ...\n\n";
     
     int option = getOption();
@@ -124,6 +127,7 @@ int main(){
             break;
         }
     }
+    */
     
     return 0;
 }
