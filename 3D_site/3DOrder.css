@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     font-family: 'Kumbh Sans', sans-serif;
-    background-color: #ffffff;
 }
 
 .navbar{
@@ -221,35 +220,37 @@
     /*border: 2px dashed green;*/
 
     
-    width: max-content;
+    width: 100%;
+    height: max-content;
     margin-bottom: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .row{
     /*border: 2px solid rgb(197, 39, 39);*/
 
-    
-    width: 800px;
-    height: 400px;
+    margin-top: 20px;
+ 
+    width: max-content;
     display: flex;
     justify-content: center;
     align-items: center;
     
-    
-    flex-wrap: wrap;
+
 }
 
 .col{
     /*border: 2px solid rgb(42, 85, 195);*/
-
+    
     
     height: 400px;
-    max-width: 1000px;
-    max-height: 500px;
     padding-left: 60px;
     padding-right: 60px;
     padding-top: 60px;
-
+    
     width: 50%; /* Each column takes half of the container width */
     box-sizing: border-box; /* Include padding and border in the width */
     padding: 0 10px; /* Add some spacing between columns */
@@ -265,7 +266,7 @@
     margin-bottom: 10px;
 }
 .col textarea{
-    max-width: 350px;
+    max-width: 300px;
     max-height: 140px;
 }
 
@@ -277,29 +278,13 @@
 }
 .button{
     height: 1cm;
-    width: 8cm;
+    width: 12cm;
     font-size: 16px;
     background-color: #ffffff;
     color: black;
     border: 2px solid black;
     border-radius: 1;
 }
-
-/*Footer
-.bottom-wrap{
-    position: fixed;
-    bottom: 0;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 10px;
-}
-
-.bottom-row{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-}
-*/
 
 /* Footer */
 .bottom-wrap {
@@ -336,7 +321,8 @@
 
 
 
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 768px) {
   .row {
     flex-direction: column; /* Stack columns vertically */
     height: auto; /* Remove fixed height */
@@ -356,7 +342,40 @@
   }
 
   .button {
-    width: 40%; /* Button takes full width */
+    width: 100%; /* Button takes full width */
+    margin-top: 20px; /* Add space between button and form */
+  }
+  .bottom-cols h2{
+      font-size: 16px;
+  }
+  .bottom-cols p{
+      font-size: 12px;
+  }
+
+
+}
+  
+@media screen and (max-width: 480px) {
+  .row {
+    flex-direction: column; /* Stack columns vertically */
+    height: auto; /* Remove fixed height */
+  }
+
+  .col {
+    width: 100%; /* Each column takes full width */
+    max-width: unset; /* Remove max-width */
+    padding: 0; /* Remove padding */
+     /* Add margin between columns */
+    text-align: center;
+    justify-content: center;
+  }
+
+  .col:first-child{
+    height: 220px;
+  }
+
+  .button {
+    width: 100%; /* Button takes full width */
     margin-top: 20px; /* Add space between button and form */
   }
   .bottom-cols h2{
