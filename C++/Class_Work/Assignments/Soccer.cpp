@@ -86,6 +86,19 @@ void totalgoals(){
 }
 
 //Best player
+/*
+void topPlayer(){
+    auto maxScore = max_element(goals.begin(), goals.end());
+
+    cout << "\nTop team player(s): ";
+    for (size_t i = 0; i < goals.size(); ++i) {
+        if (goals[i] == *maxScore) {
+            cout << playerName[i] << ", ";
+        }
+    }
+    cout << " ("<<*maxScore<<" goals)"<<endl;
+}
+*/
 void topPlayer(){
     auto maxScore = max_element(goals.begin(), goals.end());
 

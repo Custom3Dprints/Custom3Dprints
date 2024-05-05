@@ -19,8 +19,8 @@ void output(string name, string institution, double nloan, double rate, double t
 
     << "\n\nDate of Report:              " << "April, 2022\n\n"; //not current date
 
-    std::string dashes(50, '-');       // == ["-"]*40.py
-    std::cout << dashes << std::endl;  // prints dashes using std::endl
+    string dashes(50, '-');       // == ["-"]*40.py
+    cout << dashes << std::endl;  // prints dashes using std::endl
 
     double monthly_intrest = rate / 12;
     double monthly_payment = nloan*(((monthly_intrest/100)*(pow((monthly_intrest/100)+1,360))) / (pow(1+(monthly_intrest/100), 360) -1));

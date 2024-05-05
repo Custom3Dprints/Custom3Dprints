@@ -9,8 +9,8 @@ void iTrade(string name, string symbol, int nshares, float cost, float price){  
     << "\nCost per Share (@ buying):             " << cost                   // format display information
     << "\nPrice per Share (@ selling):           " << price;                 // format display information
     cout << "\n\nRealized Gains/Losses Report ...\n";
-    std::string dashes(40, '-');       // == ["-"]*40.py
-    std::cout << dashes << std::endl;  // prints dashes using std::endl
+    string dashes(40, '-');       // == ["-"]*40.py
+    cout << dashes << endl;  // prints dashes using std::endl
     cout << "Stock:              " << name <<"("<<symbol<<")"; //displayed info under dashed line
     cout << "\nQuantity:           " << nshares << " shares."; //displayed info under dashed line
     
