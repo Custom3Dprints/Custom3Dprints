@@ -62,7 +62,8 @@ function Submitbutton(){
 
 //Emialjs
 function main() {
-    let noBlanks = Submitbutton();
+    //let noBlanks = Submitbutton();
+    let noBlanks = true;
 
     if (noBlanks == true){
         //Email me
@@ -78,6 +79,7 @@ function main() {
                     phoneNumber: document.getElementById('phoneNumber').value,
                     printname: document.getElementById('printname').value,
                     printlink: document.getElementById('printlink').value,
+                    printimage: document.getElementById('printimage').files[0],
                     description: document.getElementById('description').value,
                     printSize: document.getElementById('printSize').value,
                     printColors: document.getElementById('printColors').value
@@ -111,6 +113,7 @@ function main() {
                     phoneNumber: document.getElementById('phoneNumber').value,
                     printname: document.getElementById('printname').value,
                     printlink: document.getElementById('printlink').value,
+                    printiamge: document.getElementById('printimage').files[0],
                     description: document.getElementById('description').value,
                     printSize: document.getElementById('printSize').value,
                     printColors: document.getElementById('printColors').value
