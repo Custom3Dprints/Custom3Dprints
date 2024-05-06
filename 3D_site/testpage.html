@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centered Image with Links</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    #container {
+      position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .link {
+      position: absolute;
+      text-decoration: none;
+      color: rgb(63, 179, 78);
+      font-size: 18px;
+
+    }
+    
+    #leftLink {
+        left: 28%;
+        transform: translateX(-50%);
+    }
+    
+    #rightLink {
+      right: 24%;
+    }
+
+    #mainImage {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <img id="mainImage" src="card.png" alt="Main Image">
+    <a href="#" id="leftLink" class="link">Left Link</a>
+    <a href="#" id="rightLink" class="link">Right Link</a>
+  </div>
+  <script>
+    function adjustLinksPosition() {
+      const mainImage = document.getElementById('mainImage');
+      const leftLink = document.getElementById('leftLink');
+      const rightLink = document.getElementById('rightLink');
+
+      const imageWidth = mainImage.clientWidth;
+      const imageHeight = mainImage.clientHeight;
+
+      const containerWidth = mainImage.parentNode.clientWidth;
+      const containerHeight = mainImage.parentNode.clientHeight;
+
+      leftLink.style.top = `${imageHeight / 2}px`;
+      leftLink.style.marginTop = `-${leftLink.clientHeight / 2}px`;
+      leftLink.style.height = `${leftLink.clientHeight}px`;
+      leftLink.style.fontSize = `${containerWidth * 0.02}px`;
+
+      rightLink.style.top = `${imageHeight / 2}px`;
+      rightLink.style.marginTop = `-${rightLink.clientHeight / 2}px`;
+      rightLink.style.height = `${rightLink.clientHeight}px`;
+      rightLink.style.fontSize = `${containerWidth * 0.02}px`;
+    }
+
+    adjustLinksPosition();
+
+    window.addEventListener('resize', adjustLinksPosition);
+  </script>
+</body>
+</html>

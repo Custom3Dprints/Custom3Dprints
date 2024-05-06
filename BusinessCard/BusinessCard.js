@@ -1,16 +1,25 @@
 const mainImage = document.getElementById('image');
 const Instagram = document.getElementById('instagram');
-const Website = document.getElementById('website')
-const imageWidth = mainImage.clientWidth;
-const imageHeight = mainImage.clientHeight;
-const containerWidth = mainImage.parentNode.clientWidth;
-const containerHeight = mainImage.parentNode.clientHeight
-Instagram.style.top = `${(imageHeight / 2)+115}px`;
-Instagram.style.marginTop = `-${Instagram.clientHeight / 2}px`;
-Instagram.style.height = `${Instagram.clientHeight}px`;
-Instagram.style.fontSize = `${containerWidth * 0.02}px`;
+const Website = document.getElementById('website');
 
-Website.style.top = `${(imageHeight / 2)+115}px`;
-Website.style.marginTop = `-${Website.clientHeight / 2}px`;
-Website.style.height = `${Website.clientHeight}px`;
-Website.style.fontSize = `${containerWidth * 0.02}px`;
+function adjustLinksPosition() {
+    const imageWidth = mainImage.clientWidth;
+    const imageHeight = mainImage.clientHeight;
+    const containerWidth = mainImage.parentNode.clientWidth;
+    const containerHeight = mainImage.parentNode.clientHeight;
+    // Calculate the top position based on image and container height
+    const topPosition = ((containerHeight - Instagram.offsetHeight) / 2)+20;
+    // Apply the top position to both links
+    Instagram.style.top = `${topPosition}px`;
+    Website.style.top = `${topPosition}px`;
+    // Adjust font size based on container width
+    const fontSize = containerWidth/18;
+    Instagram.style.fontSize = `${fontSize}px`;
+    Website.style.fontSize = `${fontSize}px`;
+}
+
+// Call the function initially
+adjustLinksPosition();
+
+// Add event listener for window resize
+window.addEventListener('resize', adjustLinksPosition);
