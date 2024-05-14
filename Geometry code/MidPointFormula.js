@@ -16,11 +16,16 @@ var Total_1 = (Y + Y2);
 let Denominator = 2
 
 //formula
-console.log('\n'+x1+' '+ x2 +'   ,   '+ y1+'  '+ y2+'\n  '+Denominator+'          '+ Denominator)
+let step1 = ('('+x1+' + '+ x2+') / 2' +'   ,   ('+ y1+' + '+ y2+') / 2')
 
 //answer
-console.log('\n'+Total + '   ,   ' + Total_1 + '\n' + 
-    Denominator, '      ', Denominator);
-console.log('↑'+'  Simplify'+' ↑'+ '\n')
+let step2 = (Total + ' / 2,' + Total_1 + ' / 2');
 
-console.log('Format:  M = (A, B)')
+let step3 = ('↑'+'  Simplify'+' ↑'+ '\n')
+
+let step4 = ('Format:  M = (A, B)')
+
+document.getElementById('step1').innerHTML = step1;
+document.getElementById('step2').innerHTML = step2;
+document.getElementById('step3').innerHTML = step3;
+document.getElementById('step4').innerHTML = step4;

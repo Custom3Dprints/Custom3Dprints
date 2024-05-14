@@ -6,6 +6,28 @@
     <title>Area Of Circumference</title>
 </head>
 <body>
-    <script src="AreaOfCircumference.js"></script>
+    <div>Formula => A = πr²</div><br>
+    <div id="area"></div>
+
+    <script>
+        console.log('Formula => A = πr²')
+
+        let Pi = prompt('Which Pi are you using? π or 3.14');
+        var r = prompt('What is r')
+        var Pow = Math.pow(r, 2)
+        let ans;
+        if (Pi == 'π' || Pi.toLowerCase() == "pi"){
+            ans = ('Answer --> '+Pow+'π')
+
+        
+        }if (Pi == '3.14'){
+            let Answer = (3.14 * Pow)
+            ans = ('Answer --> '+Answer)
+        }
+
+        
+        var display = document.getElementById("area");
+        display.innerHTML = ans;
+    </script>
 </body>
 </html>

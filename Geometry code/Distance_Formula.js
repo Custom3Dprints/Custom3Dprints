@@ -44,16 +44,21 @@ let AnInteger = [0
     180,181,182,183,184,185,186,187,188,189,
     190,191,192,193,194,195,196,197,198,199,
                 200];
+
+
+let ans;
 console.log('\nd = √('+ x2, x1 + ')2 + ('+ y2, y1+')2')
 if (AnInteger.includes(d)){
     let d = Math.sqrt(Step3);
-    console.log('d = ',d)        // d = distance
+    ans = "Area = " + ('d = ',d)        // d = distance
 }
 else{
     var Rounded = d.toFixed(3)
-    console.log('d = √'+Step3)
+    ans = "Area = " + ('d = √'+Step3)
 }
-let Decimal = prompt('Do you want it in decimal form? ')
-if (Decimal == 'yes'){
-    console.log('d = ',Rounded)
+let Decimal = prompt('Do you want it in decimal form? ').toLowerCase();
+if (Decimal == 'yes' || Decimal == 'y'){
+    ans = "Area = " + ('d = ',Rounded)
 }
+
+document.getElementById('area').innerHTML = ans;

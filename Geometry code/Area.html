@@ -1,11 +1,82 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Area</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Area Calculator</title>
 </head>
 <body>
-    <script src="Area.js"></script>
+
+    <div id="area"></div>
+
+<script>
+  var Question = prompt('What do you want to find the Area of ?\n   triangle, square, rectangle, circle, parallelogram, trapezoid');
+
+  function Triangle(){
+      let b = prompt('What is b');
+      let h = prompt('What is h');
+      return('A = '+ 0.5 * b * h);
+  }
+
+  function Square(){
+      let S = prompt('What is S');
+      let S2 = Math.pow(S, 2);
+      return ('A = ' + S2);
+  }
+
+  function Rectangle(){
+      let L = prompt('What is L');
+      let W = prompt('What is W');
+      return ('A = ' + L * W);
+  }
+
+  function Circle(){
+      let r = prompt('What is r');
+      let Pow = Math.PI * Math.pow(r, 2);
+      return ('A = ' + Pow);
+  }
+
+  function Parallelogram(){
+      let B = prompt('What is b');
+      let H = prompt('What is h');
+      return ('A = ' + B * H);
+  }
+
+  function Trapezoid(){
+      let h = prompt('What is h');
+      let b1 = prompt('What is base 1');
+      let b2 = prompt('What is base 2');
+      let B1 = parseFloat(b1);
+      let B2 = parseFloat(b2);
+      let BB = B1 + B2;
+      return ('A = '+ 0.5 * h * BB);
+  }
+
+  function Output(){
+      if (Question == 'triangle'){
+          return (Triangle());
+      }
+      if (Question == 'square'){
+          return (Square());
+      }
+      if (Question == 'rectangle'){
+          return (Rectangle());
+      }
+      if (Question == 'circle'){
+          return (Circle());
+      }
+      if (Question == 'parallelogram'){
+          return (Parallelogram());
+      }
+      if (Question == 'trapezoid'){
+          return (Trapezoid());
+      }
+  }
+
+  let output = Output();
+  var display = document.getElementById("area");
+  display.innerHTML = output;
+</script>
+
 </body>
 </html>

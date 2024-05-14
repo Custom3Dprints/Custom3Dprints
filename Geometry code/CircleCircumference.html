@@ -6,6 +6,29 @@
     <title>Circle Circumference</title>
 </head>
 <body>
-    <script src="CircleCircumference.js"></script>
+    <div id="area"></div>
+
+    <script>
+        var Question = prompt('Are you using Radius or Diameter? r, d, rπ, dπ')
+
+        let ans;
+
+        if (Question == 'r'){
+            var r = prompt('What is r')
+            ans = (2 * 3.14 * r)
+        }else if(Question == 'rπ'){
+            var r = prompt('What is r')
+            ans = (2 * r + 'π')
+        }else if(Question == 'd'){
+            var d = prompt('What is d')
+            ans = (3.14 * d)
+        }else if (Question == 'dπ'){
+            var d = prompt('What is d')
+            ans = (d + 'π')
+        }
+
+        var display = document.getElementById("area");
+        display.innerHTML = "area = "+ans;
+    </script>
 </body>
 </html>

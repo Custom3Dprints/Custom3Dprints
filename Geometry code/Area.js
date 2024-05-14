@@ -1,6 +1,6 @@
 var Question = prompt('What do you want to find the Area of ?\n   triangle, square, rectangle, circle, parallelogram, trapezoid')
-    //console.log(Question)
- 
+//console.log(Question)
+
 function Triangle(){
     let b = prompt('What is b');
     let h = prompt('What is h');
@@ -40,6 +40,7 @@ function Trapezoid(){
     let BB = B1 + B2
     return ('A = '+ .5 * h * BB);
 }
+
 function Output(){
     if (Question == 'triangle'){
         return (Triangle())
@@ -60,6 +61,8 @@ function Output(){
         return (Trapezoid())
     }
 }
-let output = Output()
-//console.log(Output())
-    
+
+
+let output = Output();
+var display = document.getElementById("area");
+display.innerHTML = output.toString();

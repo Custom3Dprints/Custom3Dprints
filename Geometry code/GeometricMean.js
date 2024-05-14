@@ -29,10 +29,12 @@ let AnInteger = [0
     190,191,192,193,194,195,196,197,198,199,
 200];
 
+let ans;
 if (AnInteger.includes(Answer)){
-    console.log('\n'+'Answer --> '+Answer)
+    ans = ('\n'+'Answer --> '+Answer)
 
 }else{
     let answer = Answer.toFixed(3)
-    console.log('\n'+'Answer => '+answer)
+    ans = ('\n'+'Answer => '+answer)
 }
+document.getElementById('area').innerHTML = ans;
