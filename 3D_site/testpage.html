@@ -1,79 +1,171 @@
-<!DOCTYPE html>
+<!--
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Centered Image with Links</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+      body{
+        margin: 0;
+      }
+      .container{
+          display: flex;
+          justify-content: center; /* Center horizontally */
+          align-items: center; /* Center vertically */
+          height: 99.5vh; /* Make the container full height of the viewport */
+      }
+      .image{
+          width: 80%;
+          height: 90%;
+          background-image: url('card.png');
+          background-position: center;
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+      }
+      .word1{
+          color: transparent;
+          text-decoration: none; /*No underline*/
+      
+          position: absolute;
 
-    #container {
-      position: relative;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+          left: 30%;
+          top: 55%;
+          transform: translateX(-50%);
+      }
+      .word2{
+          color: transparent;
+          text-decoration: none; /*No underline*/
+      
+          position: absolute;
 
-    .link {
-      position: absolute;
-      text-decoration: none;
-      color: rgb(63, 179, 78);
-      font-size: 18px;
-
-    }
-    
-    #leftLink {
-        left: 28%;
-        transform: translateX(-50%);
-    }
-    
-    #rightLink {
-      right: 24%;
-    }
-
-    #mainImage {
-      max-width: 100%;
-      max-height: 100%;
-    }
-  </style>
+          left: 70%;
+          top: 55%;
+          transform: translateX(-50%);
+      }
+    </style>
 </head>
 <body>
-  <div id="container">
-    <img id="mainImage" src="card.png" alt="Main Image">
-    <a href="#" id="leftLink" class="link">Left Link</a>
-    <a href="#" id="rightLink" class="link">Right Link</a>
-  </div>
-  <script>
-    function adjustLinksPosition() {
-      const mainImage = document.getElementById('mainImage');
-      const leftLink = document.getElementById('leftLink');
-      const rightLink = document.getElementById('rightLink');
+    <div class="container">
+        <div class="image" id="image">
+            <a href="https://www.instagram.com/custom.3d_prints/" class="word1" id="instagram">Instagram</a>
+            <a href="https://custom3dprints.github.io/Custom3Dprints/3D_site/3Dhtml.html" class="word2" id="website">website</a>
+        </div>
+    </div>
+    <script>
+      const mainImage = document.getElementById('image');
+      const Instagram = document.getElementById('instagram');
+      const Website = document.getElementById('website');
 
-      const imageWidth = mainImage.clientWidth;
-      const imageHeight = mainImage.clientHeight;
+      function adjustLinksPosition() {
+          const imageWidth = mainImage.clientWidth;
+          const imageHeight = mainImage.clientHeight;
+          const containerWidth = mainImage.parentNode.clientWidth;
+          const containerHeight = mainImage.parentNode.clientHeight;
+          // Calculate the top position based on image and container height
+          const topPosition = ((containerHeight - Instagram.offsetHeight) / 2)+20;
+          // Apply the top position to both links
+          Instagram.style.top = `${topPosition}px`;
+          Website.style.top = `${topPosition}px`;
+          // Adjust font size based on container width
+          const fontSize = containerWidth/18;
+          Instagram.style.fontSize = `${fontSize}px`;
+          Website.style.fontSize = `${fontSize}px`;
+      }
 
-      const containerWidth = mainImage.parentNode.clientWidth;
-      const containerHeight = mainImage.parentNode.clientHeight;
+      // Call the function initially
+      adjustLinksPosition();
 
-      leftLink.style.top = `${imageHeight / 2}px`;
-      leftLink.style.marginTop = `-${leftLink.clientHeight / 2}px`;
-      leftLink.style.height = `${leftLink.clientHeight}px`;
-      leftLink.style.fontSize = `${containerWidth * 0.02}px`;
+      // Add event listener for window resize
+      window.addEventListener('resize', adjustLinksPosition);
+    </script>
+</body>
+</html>
+-->
 
-      rightLink.style.top = `${imageHeight / 2}px`;
-      rightLink.style.marginTop = `-${rightLink.clientHeight / 2}px`;
-      rightLink.style.height = `${rightLink.clientHeight}px`;
-      rightLink.style.fontSize = `${containerWidth * 0.02}px`;
-    }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+      body{
+        margin: 0;
+      }
+      .container{
+          display: flex;
+          justify-content: center; /* Center horizontally */
+          align-items: center; /* Center vertically */
+          height: 99.5vh; /* Make the container full height of the viewport */
+      }
+      .image{
+          width: 80%;
+          height: 90%;
+          background-image: url('card.png');
+          background-position: center;
+          background-size: contain; /* Change background-size to contain */
+          background-repeat: no-repeat;
+          position: relative; /* Add position: relative */
+      }
+      .word1{
+        color: green;
+        text-decoration: none; /*No underline*/
+          
+        position: absolute;
+          
+        left: 27%;
+        top: 55%;
+        transform: translateX(-50%);
+      }
+      .word2{
+          color: green;
+          text-decoration: none; /*No underline*/
+      
+          position: absolute;
 
-    adjustLinksPosition();
+          left: 73%;
+          top: 55%;
+          transform: translateX(-50%);
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image" id="image">
+            <a href="https://www.instagram.com/custom.3d_prints/" class="word1" id="instagram">Instagram</a>
+            <a href="https://custom3dprints.github.io/Custom3Dprints/3D_site/3Dhtml.html" class="word2" id="website">website</a>
+        </div>
+    </div>
+    <script>
+      const mainImage = document.getElementById('image');
+      const Instagram = document.getElementById('instagram');
+      const Website = document.getElementById('website');
 
-    window.addEventListener('resize', adjustLinksPosition);
-  </script>
+      function adjustLinksPosition() {
+          const imageWidth = mainImage.clientWidth;
+          const imageHeight = mainImage.clientHeight;
+          const containerWidth = mainImage.parentNode.clientWidth;
+          const containerHeight = mainImage.parentNode.clientHeight;
+          // Calculate the top position based on image and container height
+          const topPosition = ((containerHeight - Instagram.offsetHeight) / 2)+20;
+          // Apply the top position to both links
+          Instagram.style.top = `${topPosition}px`;
+          Website.style.top = `${topPosition}px`;
+
+          const leftPosition = (containerWidth / 2); // Change this line
+          Instagram.style.left = `${(leftPosition - imageWidth /4)-130}px`; // Change this line
+          Website.style.left = `${leftPosition + imageWidth / 4 - 160}px`; // Change this line
+          
+          // Adjust font size based on container width
+          const fontSize = Math.min(containerWidth, containerHeight)/18;
+          Instagram.style.fontSize = `${fontSize}px`;
+          Website.style.fontSize = `${fontSize}px`;
+      }
+
+      // Call the function initially
+      adjustLinksPosition();
+
+      // Add event listener for window resize
+      window.addEventListener('resize', adjustLinksPosition);
+    </script>
 </body>
 </html>
