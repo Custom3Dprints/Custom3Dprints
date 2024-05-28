@@ -24,4 +24,4 @@ class int_float:
         else:
             return "int"
 
-#print(int_float(prompt).int_float())
+

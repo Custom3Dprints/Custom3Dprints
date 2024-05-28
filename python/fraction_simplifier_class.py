@@ -1,6 +1,5 @@
 from greatest_common_factor import GreatestCommonFactor
 
-
 class fraction: #input string ex: "6/2"
     def __init__(self, fraction):
         self.fraction = fraction
@@ -12,11 +11,10 @@ class fraction: #input string ex: "6/2"
                 numerator += self.fraction[n]
 
             elif self.fraction[n] == "/":
-                n = n + 1
-                denominator = int(self.fraction[n:])
+                denominator = int(self.fraction[n+1:])
                 break
-        numerator = int(numerator)
-        return (numerator, int(denominator))
+        #numerator = int(numerator)
+        return (int(numerator), int(denominator))
 
 class simplifier: #input needed tuple from fraction(nums).simplify() ex: (6,2)
     def __init__(self, fraction):
@@ -52,44 +50,80 @@ class simplifier: #input needed tuple from fraction(nums).simplify() ex: (6,2)
             if (denominator/gcf[-1]) == 1:
                 return (f"{int(numerator/gcf[-1])}")
 
-            return (f"{int(numerator/gcf[-1])}\n{int(denominator/gcf[-1])}")
+            return (f"\n{int(numerator/gcf[-1])}\n{int(denominator/gcf[-1])}")
 
 #num = (fraction('38/14').nums())
 #print(simplifier(num).simplify())
-print(simplifier(fraction(str(input('numerator: ')+'/'+str(input('denominator: ')))).nums()).simplify())
 
 
-"""
-ans = fraction("5/-10").nums()
+class Operations: #adds 2 fractions
+    def __init__(self, fraction1, fraction2):
+        self.fraction1 = fraction1
+        self.fraction2 = fraction2
 
-var = simplifier((ans)[0], (ans)[1]).simplify()
-print(var)
-"""
+    def add(self):
+        numerator1 = self.fraction1[0]
+        denominator1 = self.fraction1[1]
+        numerator2 = self.fraction2[0]
+        denominator2 = self.fraction2[1]
 
-"""
-f = "4/2"
-def nums(fraction):
-    numerator = ""
-    for n in range(len(fraction)):
-        if fraction[n] != "/":
-            numerator += fraction[n]
+        commondenominator = denominator1 * denominator2
+        numerator1 = denominator2 * numerator1
+        numerator2 = denominator1 * numerator2
+        
+        print(f"\n{numerator1}\t{numerator2}\n{commondenominator}\t{commondenominator}")
+        return ((numerator1+numerator2), commondenominator)
+    
+    def subtraction(self):
+        numerator1 = self.fraction1[0]
+        denominator1 = self.fraction1[1]
+        numerator2 = self.fraction2[0]
+        denominator2 = self.fraction2[1]
 
-        elif fraction[n] == "/":
-            n = n + 1
-            denominator = int(fraction[n:])
-            break
-    numerator = int(numerator)
-    return (numerator, denominator)
-numerator = (nums(f)[0])
-denominator = (nums(f)[1])
+        commondenominator = denominator1 * denominator2
+        numerator1 = denominator2 * numerator1
+        numerator2 = denominator1 * numerator2
+        
+        print(f"\n{numerator1}\t{numerator2}\n{commondenominator}\t{commondenominator}")
+        return ((numerator1-numerator2), commondenominator)
+    
+    def multiply(self):
+        numerator1 = self.fraction1[0]
+        denominator1 = self.fraction1[1]
+        numerator2 = self.fraction2[0]
+        denominator2 = self.fraction2[1]
 
-numerator_F = [num for num in range(1, numerator + 1) if numerator % num == 0]
-denominator_F = [num for num in range(1, denominator + 1) if denominator % num == 0]
+        commondenominator = denominator1 * denominator2
 
-gcf = []
-for i in numerator_F:
-    for j in denominator_F:
-        if i == j and i not in gcf:
-            gcf.append(i)
-print(f"{int(numerator/gcf[-1])}\n{int(denominator/gcf[-1])}")
+        print(f"\n{numerator1}\t{numerator2}\n{denominator1}\t{denominator2}")
+        return ((numerator1*numerator2), commondenominator)
+
+    def divide(self):
+        numerator1 = self.fraction1[0]
+        denominator1 = self.fraction1[1]
+        numerator2 = self.fraction2[0]
+        denominator2 = self.fraction2[1]
+
+        print(f"\n{numerator1}\t{denominator2}\n{denominator1}\t{numerator2}")
+        return ((numerator1*denominator2), denominator1*numerator2)
+    
+""" Operations
+fraction1v1 = fraction(str(input("Fraction1: "))).nums() #input string ex '2/3'
+fraction2v1 = fraction(str(input("Fraction2: "))).nums() #input string ex '4/7'
+
+
+adding = Operations(fraction1v1, fraction2v1).add()
+print(simplifier(adding).simplify())
+
+
+subtract = Operations(fraction1v1, fraction2v1).subtraction()
+print(simplifier(subtract).simplify())
+
+
+multiplying = Operations(fraction1v1, fraction2v1).multiply()
+print(simplifier(multiplying).simplify())
+
+
+division = Operations(fraction1v1, fraction2v1).divide()
+print(simplifier(division).simplify())
 """

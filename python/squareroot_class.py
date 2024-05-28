@@ -31,8 +31,18 @@ class Squareroot: # returns simpliest form of sqrt from int
         else:
             for index, value in enumerate(self.Sqrt):
                 if self.input % value**2 == 0 and value != 1:
-                    return((f"ans: ± {value}√{int(self.input/value**2)}"))
+                    return((f"ans: {value}√{int(self.input/value**2)}"))
 
                 elif len(self.Sqrt) == 2:
                     #print(f"{self.input} = {round(math.sqrt(self.input), 2)}")
                     return (f"ans: √{self.input}")
+
+#get list of factors
+#print(Factor(int(input('Enter number: '))).char_type_sqrt())
+
+#squareroot of number
+"""
+num = int(input('Enter number: √'))
+factor = (Factor(num).char_type_sqrt())
+print(Squareroot(factor, num).answer())
+"""
