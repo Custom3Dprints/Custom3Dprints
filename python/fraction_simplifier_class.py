@@ -52,8 +52,8 @@ class simplifier: #input needed tuple from fraction(nums).simplify() ex: (6,2)
 
             return (f"\n{int(numerator/gcf[-1])}\n{int(denominator/gcf[-1])}")
 
-#num = (fraction('38/14').nums())
-#print(simplifier(num).simplify())
+num = (fraction(input('Fraction: ')).nums())
+print(simplifier(num).simplify())
 
 
 class Operations: #adds 2 fractions

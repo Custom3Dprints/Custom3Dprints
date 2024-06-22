@@ -50,15 +50,15 @@ let ans;
 console.log('\nd = √('+ x2, x1 + ')2 + ('+ y2, y1+')2')
 if (AnInteger.includes(d)){
     let d = Math.sqrt(Step3);
-    ans = "Area = " + ('d = ',d)        // d = distance
+    ans = ('d = ',d)        // d = distance
 }
 else{
     var Rounded = d.toFixed(3)
-    ans = "Area = " + ('d = √'+Step3)
+    ans = ('d = √'+Step3)
 }
-let Decimal = prompt('Do you want it in decimal form? ').toLowerCase();
+let Decimal = prompt('Do you want it in decimal form(y or n)? ').toLowerCase();
 if (Decimal == 'yes' || Decimal == 'y'){
-    ans = "Area = " + ('d = ',Rounded)
+    ans = ('d = ',Rounded)
 }
 
 document.getElementById('area').innerHTML = ans;

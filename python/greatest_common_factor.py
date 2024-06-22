@@ -34,4 +34,4 @@ class GreatestCommonFactor():
         #Greatest common facotr
         return int(CF[-1])
 
-#print(GreatestCommonFactor(int(input("num1: ")), int(input("num2: "))).gcf()) 
+print(GreatestCommonFactor(int(input("num1: ")), int(input("num2: "))).gcf()) 

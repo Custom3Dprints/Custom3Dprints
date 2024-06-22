@@ -1,4 +1,4 @@
-
+#My solution version 1
 def arithmetic_arranger(problems, show_answers=False):
 
     nums1 = []
@@ -18,32 +18,21 @@ def arithmetic_arranger(problems, show_answers=False):
                 else:
                     sums.append(str(int(val[:i])-int(val[i+1:]))) #opperation
 
-    if (show_answers == False):
-        print(f"  {'   '.join(nums1)}\n{'    '.join(nums2)}\n{'   '.join(dash)}")
-    else:
+    if (show_answers == True):
         print(f" {'      '.join(nums1)}\n{'    '.join(nums2)}\n{'    '.join(dash)}\n  {'     '.join(sums)}")
+    else: #False
+        print(f"  {('   '.join(nums1)).rjust(0)}\n{('    '.join(nums2)).rjust(0)}\n{('   '.join(dash)).rjust(0)}")
 
 
-#arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"])
+arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"])
 #arithmetic_arranger(["32 + 8", "1 - 3801", "9999 + 9999", "523 - 49"], True)
-arithmetic_arranger(["3801 - 2", "123 + 49"])
+#arithmetic_arranger(["3801 - 2", "123 + 49"])
 
 print('\n\n')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+'''
+#The correct solution below
+    #learned how to right align
 
 def arithmetic_arranger(problems, show_answers=False):
     # Lists to hold each part of the formatted problems
@@ -56,7 +45,7 @@ def arithmetic_arranger(problems, show_answers=False):
     for problem in problems:
         # Split the problem into its components
         num1, operator, num2 = problem.split()
-
+        print(num1, operator, num2)
         # Check if the numbers are valid (all digits)
         if not num1.isdigit() or not num2.isdigit():
             return "Error: Numbers must only contain digits."
@@ -105,5 +94,6 @@ def arithmetic_arranger(problems, show_answers=False):
 arithmetic_arranger(["32 + 8", "1 - 3801", "9999 + 9999", "523 - 49"], True)
 #arithmetic_arranger(["3801 - 2", "123 + 49"])
 
+'''
 
 
