@@ -1,0 +1,171 @@
+<!--
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+      body{
+        margin: 0;
+      }
+      .container{
+          display: flex;
+          justify-content: center; /* Center horizontally */
+          align-items: center; /* Center vertically */
+          height: 99.5vh; /* Make the container full height of the viewport */
+      }
+      .image{
+          width: 80%;
+          height: 90%;
+          background-image: url('card.png');
+          background-position: center;
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+      }
+      .word1{
+          color: transparent;
+          text-decoration: none; /*No underline*/
+      
+          position: absolute;
+
+          left: 30%;
+          top: 55%;
+          transform: translateX(-50%);
+      }
+      .word2{
+          color: transparent;
+          text-decoration: none; /*No underline*/
+      
+          position: absolute;
+
+          left: 70%;
+          top: 55%;
+          transform: translateX(-50%);
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image" id="image">
+            <a href="https://www.instagram.com/custom.3d_prints/" class="word1" id="instagram">Instagram</a>
+            <a href="https://custom3dprints.github.io/Custom3Dprints/3D_site/3Dhtml.html" class="word2" id="website">website</a>
+        </div>
+    </div>
+    <script>
+      const mainImage = document.getElementById('image');
+      const Instagram = document.getElementById('instagram');
+      const Website = document.getElementById('website');
+
+      function adjustLinksPosition() {
+          const imageWidth = mainImage.clientWidth;
+          const imageHeight = mainImage.clientHeight;
+          const containerWidth = mainImage.parentNode.clientWidth;
+          const containerHeight = mainImage.parentNode.clientHeight;
+          // Calculate the top position based on image and container height
+          const topPosition = ((containerHeight - Instagram.offsetHeight) / 2)+20;
+          // Apply the top position to both links
+          Instagram.style.top = `${topPosition}px`;
+          Website.style.top = `${topPosition}px`;
+          // Adjust font size based on container width
+          const fontSize = containerWidth/18;
+          Instagram.style.fontSize = `${fontSize}px`;
+          Website.style.fontSize = `${fontSize}px`;
+      }
+
+      // Call the function initially
+      adjustLinksPosition();
+
+      // Add event listener for window resize
+      window.addEventListener('resize', adjustLinksPosition);
+    </script>
+</body>
+</html>
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+      body{
+        margin: 0;
+      }
+      .container{
+          display: flex;
+          justify-content: center; /* Center horizontally */
+          align-items: center; /* Center vertically */
+          height: 99.5vh; /* Make the container full height of the viewport */
+      }
+      .image{
+          width: 80%;
+          height: 90%;
+          background-image: url('card.png');
+          background-position: center;
+          background-size: contain; /* Change background-size to contain */
+          background-repeat: no-repeat;
+          position: relative; /* Add position: relative */
+      }
+      .word1{
+        color: green;
+        text-decoration: none; /*No underline*/
+          
+        position: absolute;
+          
+        left: 27%;
+        top: 55%;
+        transform: translateX(-50%);
+      }
+      .word2{
+          color: green;
+          text-decoration: none; /*No underline*/
+      
+          position: absolute;
+
+          left: 73%;
+          top: 55%;
+          transform: translateX(-50%);
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image" id="image">
+            <a href="https://www.instagram.com/custom.3d_prints/" class="word1" id="instagram">Instagram</a>
+            <a href="https://custom3dprints.github.io/Custom3Dprints/3D_site/3Dhtml.html" class="word2" id="website">website</a>
+        </div>
+    </div>
+    <script>
+      const mainImage = document.getElementById('image');
+      const Instagram = document.getElementById('instagram');
+      const Website = document.getElementById('website');
+
+      function adjustLinksPosition() {
+          const imageWidth = mainImage.clientWidth;
+          const imageHeight = mainImage.clientHeight;
+          const containerWidth = mainImage.parentNode.clientWidth;
+          const containerHeight = mainImage.parentNode.clientHeight;
+          // Calculate the top position based on image and container height
+          const topPosition = ((containerHeight - Instagram.offsetHeight) / 2)+20;
+          // Apply the top position to both links
+          Instagram.style.top = `${topPosition}px`;
+          Website.style.top = `${topPosition}px`;
+
+          const leftPosition = (containerWidth / 2); // Change this line
+          Instagram.style.left = `${(leftPosition - imageWidth /4)-130}px`; // Change this line
+          Website.style.left = `${leftPosition + imageWidth / 4 - 160}px`; // Change this line
+          
+          // Adjust font size based on container width
+          const fontSize = Math.min(containerWidth, containerHeight)/18;
+          Instagram.style.fontSize = `${fontSize}px`;
+          Website.style.fontSize = `${fontSize}px`;
+      }
+
+      // Call the function initially
+      adjustLinksPosition();
+
+      // Add event listener for window resize
+      window.addEventListener('resize', adjustLinksPosition);
+    </script>
+</body>
+</html>

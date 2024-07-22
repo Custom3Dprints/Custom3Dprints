@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order</title>
+    <link rel="stylesheet" href="3DOrder.css" />
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+    crossorigin="anonymous"
+    />
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a id="navbar__logo">
+                3D Custom Prints
+            </a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__">
+                    <a class="navbar__links" onclick="Home()">
+                        Home
+                    </a>
+                </li>
+                <li class="navbar__" id="Pictures">
+                    <a class="navbar__links" onclick="Pictures()">
+                        Pictures
+                    </a>
+                </li>
+                <li class="navbar__">
+                    <a class="navbar__links" onclick="Links()">
+                        Links
+                    </a>
+                </li>
+                <li class="navbar__">
+                    <a class="navbar__links" onclick="Specials()">
+                        Special Prints
+                    </a>
+                </li>
+                <li class="navbar__">
+                    <a class="navbar__links" onclick="About()">
+                        Extra Info
+                    </a>
+                </li>
+                <li class="navbar__">
+                    <a class="navbar__links" onclick="Order()">
+                        Order
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Input -->
+    <div class="main">
+        <div class="container">
+            <div class="content">
+                
+                <form id="contact-form">
+                    
+                    <div class="row">
+                        <div class="col">
+                            <h3>PERSONAL INFORMATION</h3>
+                            <label for="name">Name:</label><br>
+                            <input type="text" id="name" name="name"><br>
+                            
+                            <label for="email">Email:</label><br>
+                            <input type="email" id="email" name="email"><br>
+                            
+                            <label for="phoneNumber">Phone Number</label><br>
+                            <input type="tel" id="phoneNumber" name="phoneNumber"><br>
+                            
+                            
+                        </div>
+                        
+                        <div class="col">
+                            <h3>PRINT INFORMATION</h3>
+                            <label for="printname">Name of Print:</label><br>
+                            <input type="text" id="printname" name="printname"><br>
+                            
+                            <label for="printlink">Print link:</label><br>
+                            <input type="text" id="printlink" name="printlink"><br>
+                            
+                            <label for="description">Description:</label><br>
+                            <textarea name="description" id="description" cols="30" rows="4"></textarea><br>
+                            
+                            <label for="size">Size of Print:</label><br>
+                            <input type="text" id="printSize" placeholder="maximum size: 256mm cubed" style="width: 6cm;"><br>
+                            
+                            <label for="colors">Colors:</label><br>
+                            <input type="text" id="printColors" placeholder="Up to 4 colors"><br><br>
+                        </div>
+                    </div>
+                    <div class="centeredbutton"><button class="button" id="submitbutton" onclick="main()">Submit</button></div>
+                  </form>
+          </div>
+            <!-- Footer -->
+            <div class="bottom-wrap">
+                <div class="bottom-row">
+                    <div class="bottom-cols">
+                        <h2>Connect with me:</h2>
+                        <p>Email: marjorie.3dprints@gmail.com</p>
+                        <p>Instagram: 
+                            <a href="https://www.instagram.com/custom.3d_prints/" class="social__icon--link" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="bottom-cols">
+                        <h2>Instructions:</h2>
+                        <p>
+                            Email or DM me for any further details to order. Be as
+                            specific as possible for easiest and best results.
+                        </p>
+                    </div>
+                    <div class="bottom-cols">
+                        <h2>Details:</h2>
+                        <p>Max Dimensions: 256mmx256mmx256mm</p>
+                        <p>Max number of colors per print 4: (white, black, gold, red, blue, more upon request)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    
+    <script src="3Djs.js"></script>
+</body>
+</html>
