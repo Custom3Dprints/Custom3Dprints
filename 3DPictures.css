@@ -234,7 +234,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('Mcqueen_gradcap.jpg');
+    background-image: url('Heart\ Dragon.png');
     width: 400px;
     height: 220px;
     background-size: cover;
@@ -249,7 +249,7 @@
     background-image: url('manana\ sera\ bonito.png');
 }
 .image3 {
-    background-image: url('Mr.\ Piggy\ piggy\ bank.png');
+    background-image: url('Litho.png'); /* Litho pic*/
 }
 .image4 {
     background-image: url('Captain\ america.png');
@@ -261,7 +261,7 @@
     background-image: url('Lego\ rose\ set.png');
 }
 .image7 {
-    background-image: url('Soccer\ board\ game.png');
+    background-image: url('Soccer.png');
 }
 .image8 {
     background-image: url('3ft_bow.png');
@@ -309,8 +309,9 @@
     background-image: url('Un_Verano_Sin_Ti_Gradcap.jpg');
 }
 .image23 {
-    background-image: url('Heart\ Dragon.png');
+    background-image: url('Mr.\ Piggy\ piggy\ bank.png');
 }
+
 
 
 .column:hover .image{
