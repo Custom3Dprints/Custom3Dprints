@@ -19,7 +19,7 @@ function Links() {
     window.location.href = "3DLinks.html";
 }
 function Specials() {
-    window.location.href = "Valentine's.html";
+    window.location.href = "Halloween.html";
 }
 function About() {
     window.location.href = "3DAbout.html";
