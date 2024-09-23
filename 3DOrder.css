@@ -88,7 +88,7 @@
     border: none;
     outline: none;
     border-radius: 4px;
-    background: #f77062;
+    background: #ee5e4e;
     color: #000000;
 }
 
@@ -199,94 +199,147 @@
     }
 }
 
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
 
-/*Input Container*/
-.main{
-    /*border: 2px solid black;*/
+    margin: 0;
+    padding: 0;
+    
 }
-.container{
-    /*border: 2px solid black;*/
-    
-    
-    margin: 20px;
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 70vh; /* Make the container full height of the viewport */
 
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Horizontal adjustment*/
+
+}
+
+.content {
+
+    width: 90%;
+    max-width: 900px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 20px;
+    border-radius: 8px;
+
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+form {
+    width: 100%;
+}
+
+.row {
     display: flex;
     flex-wrap: wrap;
+    margin: 10px -15px;
 }
 
-.content{
-    /*border: 2px dashed green;*/
+.col {
+    flex: 1;
+    min-width: 280px; /* Allows the columns to stack at a smaller screen width */
+    padding: 15px;
+    box-sizing: border-box;
+}
 
-    
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input, textarea {
     width: 100%;
-    height: max-content;
-    margin-bottom: 80px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 14px;
 }
 
-.row{
-    /*border: 2px solid rgb(197, 39, 39);*/
-
-    margin-top: 20px;
- 
-    width: max-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+    background-color: #f9f9f9;
 }
 
-.col{
-    /*border: 2px solid rgb(42, 85, 195);*/
-    
-    
-    height: 400px;
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 60px;
-    
-    width: 50%; /* Each column takes half of the container width */
-    box-sizing: border-box; /* Include padding and border in the width */
-    padding: 0 10px; /* Add some spacing between columns */
+input::placeholder, textarea::placeholder {
+    color: #bbb;
 }
 
-.col h3{
-    margin-bottom: 16px;
-}
-.col label{
-    margin-bottom: 10px;
-}
-.col input{
-    margin-bottom: 10px;
-}
-.col textarea{
-    max-width: 300px;
-    max-height: 140px;
+textarea {
+    resize: none;
 }
 
-/*Button*/
-.centeredbutton{
-    display: flex;
-    justify-content: center;
-    
+
+
+
+
+.centeredbutton {
+    display: flex;               /* Use flexbox for alignment */
+    justify-content: center;     /* Center the button horizontally */
+    margin-top: 20px;           /* Optional: add some spacing above the button */
 }
-.button{
-    height: 1cm;
-    width: 12cm;
-    font-size: 16px;
-    background-color: #ffffff;
-    color: black;
-    border: 2px solid black;
-    border-radius: 1;
+
+.button {
+    width: 400px;               /* Set button width to 400px */
+    padding: 10px;              /* Adjust button padding */
+    font-size: 16px;            /* Adjust font size */
+    cursor: pointer;            /* Change cursor on hover */
 }
+
+
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .col {
+        padding: 10px 0;
+    }
+
+    .content {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 18px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    input, textarea {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    button {
+        padding: 14px;
+        font-size: 20px;
+    }
+}
+
+/* Input focus state */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
 
 /* Footer */
 .bottom-wrap {
@@ -317,76 +370,5 @@
     padding: 0 10px; /* Add padding for spacing */
     margin-bottom: 20px; /* Add margin for spacing */
     
-}
-  
-  
-
-
-
-
-@media screen and (max-width: 768px) {
-  .row {
-    flex-direction: column; /* Stack columns vertically */
-    height: auto; /* Remove fixed height */
-  }
-
-  .col {
-    width: 100%; /* Each column takes full width */
-    max-width: unset; /* Remove max-width */
-    padding: 0; /* Remove padding */
-     /* Add margin between columns */
-    text-align: center;
-    justify-content: center;
-  }
-
-  .col:first-child{
-    height: 220px;
-  }
-
-  .button {
-    width: 100%; /* Button takes full width */
-    margin-top: 20px; /* Add space between button and form */
-  }
-  .bottom-cols h2{
-      font-size: 16px;
-  }
-  .bottom-cols p{
-      font-size: 12px;
-  }
-
-
-}
-  
-@media screen and (max-width: 480px) {
-  .row {
-    flex-direction: column; /* Stack columns vertically */
-    height: auto; /* Remove fixed height */
-  }
-
-  .col {
-    width: 100%; /* Each column takes full width */
-    max-width: unset; /* Remove max-width */
-    padding: 0; /* Remove padding */
-     /* Add margin between columns */
-    text-align: center;
-    justify-content: center;
-  }
-
-  .col:first-child{
-    height: 220px;
-  }
-
-  .button {
-    width: 100%; /* Button takes full width */
-    margin-top: 20px; /* Add space between button and form */
-  }
-  .bottom-cols h2{
-      font-size: 16px;
-  }
-  .bottom-cols p{
-      font-size: 12px;
-  }
-
-
 }
   
