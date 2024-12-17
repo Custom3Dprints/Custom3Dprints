@@ -3,7 +3,9 @@
     margin: 0;
     padding: 0;
     font-family: 'Kumbh Sans', sans-serif;
-    background-color: #ffffff;
+    background: #ffffff;
+
+    color: #ffd700;
 }
 
 .navbar{
@@ -28,6 +30,7 @@
     margin: 0 auto;
     padding: 0 50px;
 }
+
 
 #navbar__logo{
     background-color: #e35349;
@@ -88,7 +91,7 @@
     border: none;
     outline: none;
     border-radius: 4px;
-    background: #ee5e4e;
+    background: #f77062;
     color: #000000;
 }
 
@@ -199,175 +202,3 @@
     }
 }
 
-/* General body styling */
-body {
-    font-family: Arial, sans-serif;
-
-    margin: 0;
-    padding: 0;
-    
-}
-
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center; /*Horizontal adjustment*/
-
-}
-
-.content {
-
-    width: 90%;
-    max-width: 900px;
-    margin-left: 50px;
-    margin-right: 50px;
-    padding: 20px;
-    border-radius: 8px;
-
-}
-
-h3 {
-    color: #333;
-    margin-bottom: 15px;
-}
-
-form {
-    width: 100%;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 10px -15px;
-}
-
-.col {
-    flex: 1;
-    min-width: 280px; /* Allows the columns to stack at a smaller screen width */
-    padding: 15px;
-    box-sizing: border-box;
-}
-
-label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 8px;
-    color: #555;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 15px;
-    font-size: 14px;
-}
-
-input[type="text"], input[type="email"], input[type="tel"], textarea {
-    background-color: #f9f9f9;
-}
-
-input::placeholder, textarea::placeholder {
-    color: #bbb;
-}
-
-textarea {
-    resize: none;
-}
-
-
-
-
-
-.centeredbutton {
-    display: flex;               /* Use flexbox for alignment */
-    justify-content: center;     /* Center the button horizontally */
-    margin-top: 20px;           /* Optional: add some spacing above the button */
-}
-
-.button {
-    width: 400px;               /* Set button width to 400px */
-    padding: 10px;              /* Adjust button padding */
-    font-size: 16px;            /* Adjust font size */
-    cursor: pointer;            /* Change cursor on hover */
-}
-
-
-
-button:hover {
-    background-color: #45a049;
-}
-
-/* Responsive adjustments for mobile */
-@media (max-width: 768px) {
-    .row {
-        flex-direction: column;
-        padding: 0;
-    }
-
-    .col {
-        padding: 10px 0;
-    }
-
-    .content {
-        margin: 20px auto;
-        padding: 15px;
-    }
-
-    button {
-        width: 100%;
-        font-size: 18px;
-        padding: 12px;
-    }
-}
-
-@media (max-width: 480px) {
-    input, textarea {
-        font-size: 16px;
-        padding: 12px;
-    }
-
-    button {
-        padding: 14px;
-        font-size: 20px;
-    }
-}
-
-/* Input focus state */
-input:focus, textarea:focus {
-    outline: none;
-    border-color: #4CAF50;
-}
-
-
-/* Footer */
-.bottom-wrap {
-    bottom: 0;
-    left: 0; /* Adjusted left alignment */
-    width: 100%; /* Ensure full width */
-    display: flex;
-    flex-wrap: wrap; /* Allow content to wrap */
-    justify-content: center; /* Center content horizontally */
-    
-    padding: 20px 0; /* Add padding for spacing */
-    
-}
-
-.bottom-row {
-    display: flex;
-    flex-wrap: wrap; /* Allow content to wrap */
-    justify-content: space-around; /* Spread content evenly */
-    max-width: 1300px; /* Limit maximum width */
-    width: 100%; /* Ensure full width */
-    padding: 0 20px; /* Add padding for spacing */
-}
-
-.bottom-cols {
-    flex: 0 1 300px; /* Allow items to grow, shrink, and have a preferred width */
-    max-width: 300px; /* Limit maximum width */
-    padding: 0 10px; /* Add padding for spacing */
-    margin-bottom: 20px; /* Add margin for spacing */
-    
-}
-  

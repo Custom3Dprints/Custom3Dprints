@@ -10,6 +10,7 @@
     integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
     crossorigin="anonymous"
     />
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body>
     <!-- navbar -->
@@ -94,11 +95,15 @@
                             <input type="text" id="printColors" placeholder="Up to 4 colors"><br><br>
                         </div>
                     </div>
-                    <div class="centeredbutton"><button class="button" id="submitbutton" onclick="main()">Submit</button></div>
-                  </form>
+                    <div class="centeredbutton">
+                        <button class="button" id="submitbutton" type="submit">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+    
+    
     
     
     <!-- Footer -->
@@ -128,9 +133,89 @@
         </div>
     </div>
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     
     <script src="3Djs.js"></script>
+
+    
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", main);
+
+        function main() {
+            emailjs.init("I3yt7NiiNUxlmPIMt"); // Replace with public key
+
+            document.getElementById("contact-form").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Validate form fields
+                if (!validateForm()) {
+                    return; // Exit if validation fails
+                }
+
+                // Show loading state on the submit button
+                const submitButton = document.getElementById("submitbutton");
+                submitButton.textContent = "Sending...";
+                submitButton.disabled = true;
+
+                // Prepare form data
+                const formData = {
+                    name: document.getElementById("name").value.trim(),
+                    email: document.getElementById("email").value.trim(),
+                    phoneNumber: document.getElementById("phoneNumber").value.trim(),
+                    printname: document.getElementById("printname").value.trim(),
+                    printlink: document.getElementById("printlink").value.trim(),
+                    description: document.getElementById("description").value.trim(),
+                    printSize: document.getElementById("printSize").value.trim(),
+                    printColors: document.getElementById("printColors").value.trim(),
+                };
+
+                // Send email to the business
+                emailjs
+                    .send("service_n2ltlnj", "business-side", formData)
+                    .then((response) => {
+                        console.log("Email to business sent successfully!", response.status, response.text);
+
+                        // Send email to the client (user)
+                        return emailjs.send("service_n2ltlnj", "client-side", formData);
+                    })
+                    .then((response) => {
+                        console.log("Email to customer sent successfully!", response.status, response.text);
+
+                        // Reset button and redirect on success
+                        submitButton.textContent = "Submit";
+                        submitButton.disabled = false;
+                        window.location.href = "OrderSucesspage.html"; // Redirect to success page
+                    })
+                    .catch((error) => {
+                        console.error("Failed to send emails!", error);
+
+                        // Handle errors and reset button state
+                        submitButton.textContent = "Submit";
+                        submitButton.disabled = false;
+                        alert("Something went wrong. Please try again.");
+                    });
+            });
+        }
+
+        // Validation Logic
+        function validateForm() {
+            const fullName = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phoneNumber = document.getElementById("phoneNumber").value.trim();
+            const printname = document.getElementById("printname").value.trim();
+            const printlink = document.getElementById("printlink").value.trim();
+            const description = document.getElementById("description").value.trim();
+            const printSize = document.getElementById("printSize").value.trim();
+            const printColors = document.getElementById("printColors").value.trim();
+
+            if (!fullName || !email || !phoneNumber || !printname || !printlink || !description || !printSize || !printColors) {
+                alert("You're missing some information. Please double-check the information entered before clicking submit again.");
+                return false;
+            }
+            return true;
+        }
+
+    </script>
+    
 </body>
 </html>
 

@@ -1,32 +1,3 @@
-function Submitbutton(){
-    var fullName = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var phoneNumber = document.getElementById("phoneNumber").value;
-    var printname = document.getElementById("printname").value;
-    var printlink = document.getElementById("printlink").value;
-    var description = document.getElementById("description").value;
-    var printSize = document.getElementById("printSize").value;
-    var printColors = document.getElementById("printColors").value;
-    
-    console.log("Full Name:", fullName);
-    console.log("Email:", email);
-    console.log("Phone Number:", phoneNumber);
-    console.log("Print Name:", printname);
-    console.log("Print link:", printlink);
-    console.log("Description:", description);
-    console.log("Print Size:", printSize);
-    console.log("Print Colors:", printColors);
-
-    //if every spot needs to be filled out
-    if (fullName == "" || email == "" || phoneNumber == "" || printname == "" || printlink == "" || description == "" || printSize == "" || printColors == ""){
-        alert("You're missing some information. Please double check the informetion imputted before clicking submit again.");
-        return false;
-    }
-    else{
-        return true;
-    }
-}
-
 //Emialjs
 function main() {
     let noBlanks = Submitbutton();
