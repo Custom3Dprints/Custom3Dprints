@@ -226,7 +226,7 @@
         rgba(0,0,0,0) 0%, 
         rgba(17,17,17,0.6)100%
     ),
-    url('2024_crown.webp');
+    url('/Pictures/newyears/pic1.webp');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -239,7 +239,7 @@
         rgba(0,0,0,0) 0%, 
         rgba(17,17,17,0.6)100%
     ),
-    url('2024_glasses.webp');
+    url('/Pictures/newyears/pic2.webp');
 }
 .services__card:nth-child(3){
     background-image: linear-gradient(
@@ -247,7 +247,7 @@
         rgba(0,0,0,0) 0%, 
         rgba(17,17,17,0.6)100%
     ),
-    url('2024_Hat_headband.jpg');
+    url('/Pictures/newyears/pic3.webp');
 }
 .services__card:nth-child(4){
     background-image: linear-gradient(
@@ -255,7 +255,7 @@
         rgba(0,0,0,0) 0%, 
         rgba(17,17,17,0.6)100%
     ),
-    url('2024_partyhats.webp');
+    url('/Pictures/newyears/pic4.webp');
 }
 .services__card:nth-child(5){
     background-image: linear-gradient(
@@ -264,6 +264,15 @@
         rgba(17,17,17,0.6)100%
     ),
     url('newyears_sign.webp');
+}
+.img6{
+    background-image: url('/Pictures/newyears/pic6.webp');
+}
+.img7{
+    background-image: url('/Pictures/newyears/pic7.webp');
+}
+.img8{
+    background-image: url('/Pictures/newyears/pic8.webp');
 }
 .services__card{ 
     color: #fff;
